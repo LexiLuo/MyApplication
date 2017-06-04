@@ -11,3 +11,21 @@
 .idea/gradle.xml
 
 .idea/gradle.xml
+
+*.gradle
+
+.idea/misc.xml
+
+.idea/modules.xml
+
+.idea/modules.xml
+
+app/build.gradle
+
+app/src/main/res/drawable/roomExample.PNG
+
+gradle/wrapper/gradle-wrapper.properties
+
+build.gradle
+
+app/src/main/res/drawable/roomExample.PNG

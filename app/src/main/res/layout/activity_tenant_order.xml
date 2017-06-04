@@ -53,7 +53,6 @@
         android:layout_weight="0.50"
         android:background="@android:color/holo_orange_dark"
         android:textColor="#ffffff"
-        android:textSize="25dp"
-        android:layout_alinParentBottom="true"/>
+        android:textSize="25dp" />
 
 </LinearLayout>
