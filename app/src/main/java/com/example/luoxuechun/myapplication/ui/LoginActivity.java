@@ -1,6 +1,7 @@
 package com.example.luoxuechun.myapplication.ui;
 
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -53,24 +54,29 @@ public class LoginActivity extends AppCompatActivity {
 
                 //check the right of user
 
+                if(true){
+                    Intent intent=new Intent();
+                    intent.setClass(LoginActivity.this,TenantOrderActivity.class);
+                    startActivity(intent);
+                }
             }
         });
 
-        WebView webview = new WebView(this);
-        //设置WebView属性，能够执行Javascript脚本
-        webview.getSettings().setJavaScriptEnabled(true);
-
-        try {
-            //设置打开的页面地址
-            webview.loadUrl("file:///android_asset/index_files/index.html");
-        }
-        catch(Exception ex)
-        {
-            ex.printStackTrace();
-        }
-        setContentView(webview);
-
-
+//        WebView webview = new WebView(this);
+//        //设置WebView属性，能够执行Javascript脚本
+//        webview.getSettings().setJavaScriptEnabled(true);
+//
+//        try {
+//            //设置打开的页面地址
+//            webview.loadUrl("file:///android_asset/index_files/index.html");
+//        }
+//        catch(Exception ex)
+//        {
+//            ex.printStackTrace();
+//        }
+//        setContentView(webview);
+//
+//
     }
 
 }

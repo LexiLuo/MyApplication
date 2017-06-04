@@ -1,6 +1,59 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:weightSum="1">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="0.50"
+        android:layout_marginTop="50dp">
+
+        <Button
+            android:layout_width="280dp"
+            android:layout_height="80dp"
+            android:text="Check In/Out Date"
+            android:textSize="20dp"
+            android:id="@+id/button"
+            android:layout_gravity="center_horizontal|top" />
+
+        <Button
+            android:layout_width="280dp"
+            android:layout_height="80dp"
+            android:text="Hotel Location"
+            android:textSize="20dp"
+            android:id="@+id/button2"
+            android:layout_gravity="center" />
+
+        <Button
+            android:layout_width="280dp"
+            android:layout_height="80dp"
+            android:textSize="20dp"
+            android:text="Total Price"
+            android:id="@+id/button3"
+            android:layout_gravity="center_horizontal|bottom" />
+
+        <Button
+            android:layout_width="280dp"
+            android:layout_height="80dp"
+            android:textSize="20dp"
+            android:text="Other Requirements"
+            android:id="@+id/button4"
+            android:layout_gravity="center_horizontal" />
+    </LinearLayout>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:text="Start Ordering"
+        android:id="@+id/button5"
+        android:layout_weight="0.50"
+        android:background="@android:color/holo_orange_dark"
+        android:textColor="#ffffff"
+        android:textSize="25dp"
+        android:layout_alinParentBottom="true"/>
 
 </LinearLayout>
