@@ -36,7 +36,7 @@ public class LoginActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         //remove the title
-        this.requestWindowFeature(Window.FEATURE_NO_TITLE);
+        //this.requestWindowFeature(Window.FEATURE_NO_TITLE);
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
@@ -57,6 +57,21 @@ public class LoginActivity extends AppCompatActivity {
                 if(true){
                     Intent intent=new Intent();
                     intent.setClass(LoginActivity.this,TenantOrderActivity.class);
+                    startActivity(intent);
+                }
+            }
+        });
+        landlordLoginButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                nameValue = et_name.getText().toString();
+                passValue = et_pass.getText().toString();
+
+                //check the right of user
+
+                if(true){
+                    Intent intent=new Intent();
+                    intent.setClass(LoginActivity.this,RoomResultsDetailActivity.class);
                     startActivity(intent);
                 }
             }
