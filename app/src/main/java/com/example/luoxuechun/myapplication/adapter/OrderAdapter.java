@@ -13,7 +13,7 @@ public class OrderAdapter extends BaseAdapter {
     public int getCount() {
         return 0;
     }
-//
+
     @Override
     public Object getItem(int position) {
         return null;
