@@ -41,11 +41,11 @@ public class OrderResultsActivity extends AppCompatActivity implements AdapterVi
 
         //初始化data
         ArrayList<String> tags=new ArrayList<>();
-        OrderResultsEntity orderResultsEntity1=new OrderResultsEntity(255,230,"0.19km away from the destation","Lingnanjiayuan Chain Hotel",4.62,tags);
-        OrderResultsEntity orderResultsEntity2=new OrderResultsEntity(250,235,"0.31km away from the destation","Jiaxin Hotel",4.66,tags);
-        OrderResultsEntity orderResultsEntity3=new OrderResultsEntity(180,160,"0.22km away from the destation","Jiayu Hotel",4.71,tags);
-        OrderResultsEntity orderResultsEntity4=new OrderResultsEntity(198,162,"0.28km away from the destation","Inn De Hotel",4.74,tags);
-        OrderResultsEntity orderResultsEntity5=new OrderResultsEntity(260,240,"0.38km away from the destation","Wong Kim Dinh Hotel",4.61,tags);
+        OrderResultsEntity orderResultsEntity1=new OrderResultsEntity(255,230,"0.19km away from the destination","Lingnanjiayuan Chain Hotel",4.62,tags);
+        OrderResultsEntity orderResultsEntity2=new OrderResultsEntity(250,235,"0.31km away from the destination","Jiaxin Hotel",4.66,tags);
+        OrderResultsEntity orderResultsEntity3=new OrderResultsEntity(180,160,"0.22km away from the destination","Jiayu Hotel",4.71,tags);
+        OrderResultsEntity orderResultsEntity4=new OrderResultsEntity(198,162,"0.28km away from the destination","Inn De Hotel",4.74,tags);
+        OrderResultsEntity orderResultsEntity5=new OrderResultsEntity(260,240,"0.38km away from the destination","Wong Kim Dinh Hotel",4.61,tags);
 
         mList.add(orderResultsEntity4);
         mList.add(orderResultsEntity3);

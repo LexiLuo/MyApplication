@@ -44,7 +44,8 @@ public class RoomResultsDetailActivity extends AppCompatActivity {
     {
         mDatas = new ArrayList<String>();
         mDatas.add("Origin Pirce 260$");
-        mDatas.add("First Negotation 256$");
+        mDatas.add("First Negotiation 256$");
+        mDatas.add("Second Negotiation 250$");
         mDatas.add("Current Price 250$");
     }
 
