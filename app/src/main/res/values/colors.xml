@@ -5,4 +5,7 @@
     <color name="colorAccent">#FF4081</color>
     <color name="colorDivider">#9bda68</color>
     <color name="white">#fefffc</color>
+    <color name="grey">#e1e1df</color>
+    <color name="toolBarColor">#313f48</color>
+    <color name="baseButtonColor">#6aa632</color>
 </resources>

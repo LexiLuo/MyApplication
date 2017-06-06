@@ -1,6 +1,7 @@
 package com.example.luoxuechun.myapplication.ui;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.graphics.Paint;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -24,12 +25,16 @@ public class RoomResultsDetailActivity extends AppCompatActivity {
     private ArrayList<String> mDatas;
     private HomeAdapter mAdapter;
     private TextView originPrice2;
+    private TextView location;
+    private TextView hotelName;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_room_results_detail);
         initData();
+        Intent intent=getIntent();
         mRecyclerView=(RecyclerView)findViewById(R.id.recycleView);
         LinearLayoutManager linearLayoutManagerHorizontal = new LinearLayoutManager(this);
         linearLayoutManagerHorizontal.setOrientation(LinearLayoutManager.VERTICAL);
@@ -38,6 +43,12 @@ public class RoomResultsDetailActivity extends AppCompatActivity {
         mRecyclerView.setAdapter(mAdapter= new HomeAdapter());
         originPrice2=(TextView) findViewById(R.id.originText2);
         originPrice2.getPaint().setFlags(Paint.STRIKE_THRU_TEXT_FLAG);
+
+        location=(TextView)findViewById(R.id.locationText1);
+//        hotelName=(TextView)findViewById(R.id);
+        location.setText(intent.getStringExtra("hotelLocation"));
+   //     hotelName.setText(intent.getStringExtra("hotelName"));
+
     }
 
     protected void initData()

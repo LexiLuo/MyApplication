@@ -4,6 +4,7 @@ package com.example.luoxuechun.myapplication.ui;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Window;
 import android.webkit.WebView;
@@ -16,7 +17,7 @@ import com.example.luoxuechun.myapplication.R;
 import org.w3c.dom.Text;
 
 
-public class LoginActivity extends AppCompatActivity {
+public class LoginActivity extends BaseAppCompatActivity {
     /*
      * register：
      * tenant login：
@@ -39,7 +40,11 @@ public class LoginActivity extends AppCompatActivity {
         //this.requestWindowFeature(Window.FEATURE_NO_TITLE);
 
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_login);
+
+        setToolBarTitle("Login");
+        getSubTitle().setText("More");
 
         et_name = (EditText) findViewById(R.id.nameText);
         et_pass = (EditText) findViewById(R.id.passwordText);
@@ -92,6 +97,11 @@ public class LoginActivity extends AppCompatActivity {
 //        setContentView(webview);
 //
 //
+    }
+
+    @Override
+    protected int getLayoutId() {
+        return R.layout.activity_login;
     }
 
 }

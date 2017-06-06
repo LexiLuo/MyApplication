@@ -1,6 +1,7 @@
 package com.example.luoxuechun.myapplication.adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Paint;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -14,6 +15,7 @@ import android.widget.TextView;
 import com.example.luoxuechun.myapplication.R;
 import com.example.luoxuechun.myapplication.entity.OrderResultsEntity;
 import com.example.luoxuechun.myapplication.ui.OrderResultsActivity;
+import com.example.luoxuechun.myapplication.ui.RoomResultsDetailActivity;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
@@ -58,17 +60,37 @@ public class OrderResultsAdapter extends BaseAdapter {
           }
 
 
-        TextView originPrice=(TextView)convertView.findViewById(R.id.originPrice);
+        final TextView originPrice=(TextView)convertView.findViewById(R.id.originPrice);
         originPrice.getPaint().setFlags(Paint.STRIKE_THRU_TEXT_FLAG);
         originPrice.setText(mData.get(position).getOriginPrice()+"");
-        TextView currentPrice=(TextView)convertView.findViewById(R.id.currentPrice);
+        final TextView currentPrice=(TextView)convertView.findViewById(R.id.currentPrice);
         currentPrice.setText(mData.get(position).getCurrentPrice()+"");
-        TextView hotelName=(TextView) convertView.findViewById(R.id.hotelNameText);
+        final TextView hotelName=(TextView) convertView.findViewById(R.id.hotelNameText);
         hotelName.setText(mData.get(position).getName());
-        TextView hotelLocation=(TextView) convertView.findViewById(R.id.hotelLocationText);
+        final TextView hotelLocation=(TextView) convertView.findViewById(R.id.hotelLocationText);
         hotelLocation.setText(mData.get(position).getLocation());
         Button orderNowButton=(Button)convertView.findViewById(R.id.orderNowButton);
         Button decideButton=(Button)convertView.findViewById(R.id.decideButton);
+
+
+        decideButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                //check the right of user
+
+                if(true){
+                    Intent intent=new Intent(mContext,RoomResultsDetailActivity.class);
+                    Bundle b = new Bundle();
+                    b.putString("hotelName",hotelName.getText().toString());
+                    b.putString("originPrice",originPrice.getText().toString());
+                    b.putString("currentPrice",currentPrice.getText().toString());
+                    b.putString("hotelLocation",hotelLocation.getText().toString());
+                    intent.putExtras(b);
+                    mContext.startActivity(intent);
+                }
+            }
+        });
 
 
 //        img_icon.setBackgroundResource(mData.get(position).getaIcon());
