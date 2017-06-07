@@ -1,10 +1,18 @@
 [
     {
-        "merged": "/Users/luoxuechun/MyApplication/app/build/intermediates/res/merged/debug/menu/activity_left_slip_drawer.xml",
-        "source": "/Users/luoxuechun/MyApplication/app/src/main/res/menu/activity_left_slip_drawer.xml"
+        "merged": "C:\\Users\\user\\Desktop\\SmartHotelApp\\app\\build\\intermediates\\res\\merged\\debug\\menu\\left_slip.xml",
+        "source": "C:\\Users\\user\\Desktop\\SmartHotelApp\\app\\src\\main\\res\\menu\\left_slip.xml"
     },
     {
-        "merged": "/Users/luoxuechun/MyApplication/app/build/intermediates/res/merged/debug/menu/left_slip.xml",
-        "source": "/Users/luoxuechun/MyApplication/app/src/main/res/menu/left_slip.xml"
+        "merged": "C:\\Users\\luoxuechun\\MyApplication\\app\\build\\intermediates\\res\\merged\\debug\\menu\\activity_left_slip_drawer.xml",
+        "source": "C:\\Users\\luoxuechun\\MyApplication\\app\\src\\main\\res\\menu\\activity_left_slip_drawer.xml"
+    },
+    {
+        "merged": "C:\\Users\\luoxuechun\\MyApplication\\app\\build\\intermediates\\res\\merged\\debug\\menu\\left_slip.xml",
+        "source": "C:\\Users\\luoxuechun\\MyApplication\\app\\src\\main\\res\\menu\\left_slip.xml"
+    },
+    {
+        "merged": "C:\\Users\\user\\Desktop\\SmartHotelApp\\app\\build\\intermediates\\res\\merged\\debug\\menu\\activity_left_slip_drawer.xml",
+        "source": "C:\\Users\\user\\Desktop\\SmartHotelApp\\app\\src\\main\\res\\menu\\activity_left_slip_drawer.xml"
     }
 ]

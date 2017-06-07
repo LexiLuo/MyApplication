@@ -1,31 +1,36 @@
 -- Merging decision tree log ---
 manifest
+<<<<<<< HEAD
 ADDED from /Users/luoxuechun/MyApplication/app/src/main/AndroidManifest.xml:2:1-48:12
+=======
+ADDED from C:\Users\user\Desktop\SmartHotelApp\app\src\main\AndroidManifest.xml:2:1-54:12
+>>>>>>> origin/master
 	package
-		ADDED from /Users/luoxuechun/MyApplication/app/src/main/AndroidManifest.xml:3:5-51
-		INJECTED from /Users/luoxuechun/MyApplication/app/src/main/AndroidManifest.xml
-		INJECTED from /Users/luoxuechun/MyApplication/app/src/main/AndroidManifest.xml
+		ADDED from C:\Users\user\Desktop\SmartHotelApp\app\src\main\AndroidManifest.xml:3:5-51
+		INJECTED from C:\Users\user\Desktop\SmartHotelApp\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\user\Desktop\SmartHotelApp\app\src\main\AndroidManifest.xml
 	android:versionName
-		INJECTED from /Users/luoxuechun/MyApplication/app/src/main/AndroidManifest.xml
-		INJECTED from /Users/luoxuechun/MyApplication/app/src/main/AndroidManifest.xml
+		INJECTED from C:\Users\user\Desktop\SmartHotelApp\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\user\Desktop\SmartHotelApp\app\src\main\AndroidManifest.xml
 	xmlns:android
-		ADDED from /Users/luoxuechun/MyApplication/app/src/main/AndroidManifest.xml:2:11-69
+		ADDED from C:\Users\user\Desktop\SmartHotelApp\app\src\main\AndroidManifest.xml:2:11-69
 	android:versionCode
-		INJECTED from /Users/luoxuechun/MyApplication/app/src/main/AndroidManifest.xml
-		INJECTED from /Users/luoxuechun/MyApplication/app/src/main/AndroidManifest.xml
+		INJECTED from C:\Users\user\Desktop\SmartHotelApp\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\user\Desktop\SmartHotelApp\app\src\main\AndroidManifest.xml
 uses-permission#android.permission.GET_ACCOUNTS
-ADDED from /Users/luoxuechun/MyApplication/app/src/main/AndroidManifest.xml:6:5-71
+ADDED from C:\Users\user\Desktop\SmartHotelApp\app\src\main\AndroidManifest.xml:6:5-71
 	android:name
-		ADDED from /Users/luoxuechun/MyApplication/app/src/main/AndroidManifest.xml:6:22-68
+		ADDED from C:\Users\user\Desktop\SmartHotelApp\app\src\main\AndroidManifest.xml:6:22-68
 uses-permission#android.permission.READ_PROFILE
-ADDED from /Users/luoxuechun/MyApplication/app/src/main/AndroidManifest.xml:7:5-71
+ADDED from C:\Users\user\Desktop\SmartHotelApp\app\src\main\AndroidManifest.xml:7:5-71
 	android:name
-		ADDED from /Users/luoxuechun/MyApplication/app/src/main/AndroidManifest.xml:7:22-68
+		ADDED from C:\Users\user\Desktop\SmartHotelApp\app\src\main\AndroidManifest.xml:7:22-68
 uses-permission#android.permission.READ_CONTACTS
-ADDED from /Users/luoxuechun/MyApplication/app/src/main/AndroidManifest.xml:8:5-72
+ADDED from C:\Users\user\Desktop\SmartHotelApp\app\src\main\AndroidManifest.xml:8:5-72
 	android:name
-		ADDED from /Users/luoxuechun/MyApplication/app/src/main/AndroidManifest.xml:8:22-69
+		ADDED from C:\Users\user\Desktop\SmartHotelApp\app\src\main\AndroidManifest.xml:8:22-69
 application
+<<<<<<< HEAD
 ADDED from /Users/luoxuechun/MyApplication/app/src/main/AndroidManifest.xml:10:5-46:19
 MERGED from [com.android.support:appcompat-v7:24.2.1] /Users/luoxuechun/MyApplication/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.1/AndroidManifest.xml:25:5-20
 MERGED from [com.android.support:support-v4:24.2.1] /Users/luoxuechun/MyApplication/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.2.1/AndroidManifest.xml:25:5-20
@@ -91,29 +96,51 @@ MERGED from [com.android.support:support-compat:24.2.1] /Users/luoxuechun/MyAppl
 MERGED from [com.android.support:support-compat:24.2.1] /Users/luoxuechun/MyApplication/app/build/intermediates/exploded-aar/com.android.support/support-compat/24.2.1/AndroidManifest.xml:25:5-20
 MERGED from [com.android.support:support-core-ui:24.2.1] /Users/luoxuechun/MyApplication/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/24.2.1/AndroidManifest.xml:25:5-20
 MERGED from [com.android.support:support-compat:24.2.1] /Users/luoxuechun/MyApplication/app/build/intermediates/exploded-aar/com.android.support/support-compat/24.2.1/AndroidManifest.xml:25:5-20
+=======
+ADDED from C:\Users\user\Desktop\SmartHotelApp\app\src\main\AndroidManifest.xml:10:5-52:19
+MERGED from [com.android.support:design:24.2.1] C:\Users\user\.android\build-cache\78edb10a98353ee56783ed2cf7e3156585869ced\output\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:appcompat-v7:24.2.1] C:\Users\user\.android\build-cache\9b0fdc214fe352ea317bd55bae9849b14f83168e\output\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-v4:24.2.1] C:\Users\user\.android\build-cache\5d4c76fc2a7b58b759232ca8e7372cf71bfaad10\output\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-fragment:24.2.1] C:\Users\user\.android\build-cache\a17a65206c6e0b5a0f0b21fc6b8a1c01edff1f51\output\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-media-compat:24.2.1] C:\Users\user\.android\build-cache\bcaed5353135e72dde2c0114ae59fb4fe3eee2d2\output\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-core-utils:24.2.1] C:\Users\user\.android\build-cache\2fcce44145f1df0216658310381417e3733139b5\output\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:animated-vector-drawable:24.2.1] C:\Users\user\.android\build-cache\ed94d1bc489c30794b9fe5207838346ccb9bacab\output\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-vector-drawable:24.2.1] C:\Users\user\.android\build-cache\c0d34135e2697c0bd00e8d765e8d9f1f90183b2c\output\AndroidManifest.xml:23:5-20
+MERGED from [com.android.support:support-core-ui:24.2.1] C:\Users\user\.android\build-cache\5b50782de9e34fc8c89330c7efe47bd4c3e021d1\output\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-compat:24.2.1] C:\Users\user\.android\build-cache\fb881195be6488a24081f1d79ec0f19c51c836dd\output\AndroidManifest.xml:25:5-20
+>>>>>>> origin/master
 	android:label
-		ADDED from /Users/luoxuechun/MyApplication/app/src/main/AndroidManifest.xml:13:9-41
+		ADDED from C:\Users\user\Desktop\SmartHotelApp\app\src\main\AndroidManifest.xml:13:9-41
 	android:supportsRtl
-		ADDED from /Users/luoxuechun/MyApplication/app/src/main/AndroidManifest.xml:14:9-35
+		ADDED from C:\Users\user\Desktop\SmartHotelApp\app\src\main\AndroidManifest.xml:14:9-35
 	android:allowBackup
-		ADDED from /Users/luoxuechun/MyApplication/app/src/main/AndroidManifest.xml:11:9-35
+		ADDED from C:\Users\user\Desktop\SmartHotelApp\app\src\main\AndroidManifest.xml:11:9-35
 	android:icon
-		ADDED from /Users/luoxuechun/MyApplication/app/src/main/AndroidManifest.xml:12:9-43
+		ADDED from C:\Users\user\Desktop\SmartHotelApp\app\src\main\AndroidManifest.xml:12:9-43
 	android:theme
-		ADDED from /Users/luoxuechun/MyApplication/app/src/main/AndroidManifest.xml:15:9-40
+		ADDED from C:\Users\user\Desktop\SmartHotelApp\app\src\main\AndroidManifest.xml:15:9-40
 activity#com.example.luoxuechun.myapplication.ui.LoginActivity
+<<<<<<< HEAD
 ADDED from /Users/luoxuechun/MyApplication/app/src/main/AndroidManifest.xml:16:9-23:20
+=======
+ADDED from C:\Users\user\Desktop\SmartHotelApp\app\src\main\AndroidManifest.xml:16:9-24:20
+>>>>>>> origin/master
 	android:label
-		ADDED from /Users/luoxuechun/MyApplication/app/src/main/AndroidManifest.xml:18:13-45
+		ADDED from C:\Users\user\Desktop\SmartHotelApp\app\src\main\AndroidManifest.xml:18:13-45
 	android:name
-		ADDED from /Users/luoxuechun/MyApplication/app/src/main/AndroidManifest.xml:17:13-45
+		ADDED from C:\Users\user\Desktop\SmartHotelApp\app\src\main\AndroidManifest.xml:17:13-45
 intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
+<<<<<<< HEAD
 ADDED from /Users/luoxuechun/MyApplication/app/src/main/AndroidManifest.xml:19:13-22:29
+=======
+ADDED from C:\Users\user\Desktop\SmartHotelApp\app\src\main\AndroidManifest.xml:19:13-23:29
+>>>>>>> origin/master
 action#android.intent.action.MAIN
-ADDED from /Users/luoxuechun/MyApplication/app/src/main/AndroidManifest.xml:20:17-69
+ADDED from C:\Users\user\Desktop\SmartHotelApp\app\src\main\AndroidManifest.xml:20:17-69
 	android:name
-		ADDED from /Users/luoxuechun/MyApplication/app/src/main/AndroidManifest.xml:20:25-66
+		ADDED from C:\Users\user\Desktop\SmartHotelApp\app\src\main\AndroidManifest.xml:20:25-66
 category#android.intent.category.LAUNCHER
+<<<<<<< HEAD
 ADDED from /Users/luoxuechun/MyApplication/app/src/main/AndroidManifest.xml:21:17-77
 	android:name
 		ADDED from /Users/luoxuechun/MyApplication/app/src/main/AndroidManifest.xml:21:27-74
@@ -141,78 +168,51 @@ uses-permission#android.permission.INTERNET
 ADDED from /Users/luoxuechun/MyApplication/app/src/main/AndroidManifest.xml:47:5-66
 	android:name
 		ADDED from /Users/luoxuechun/MyApplication/app/src/main/AndroidManifest.xml:47:22-64
+=======
+ADDED from C:\Users\user\Desktop\SmartHotelApp\app\src\main\AndroidManifest.xml:22:17-77
+	android:name
+		ADDED from C:\Users\user\Desktop\SmartHotelApp\app\src\main\AndroidManifest.xml:22:27-74
+activity#com.example.luoxuechun.myapplication.ui.TenantOrderActivity
+ADDED from C:\Users\user\Desktop\SmartHotelApp\app\src\main\AndroidManifest.xml:25:9-33:16
+	android:label
+		ADDED from C:\Users\user\Desktop\SmartHotelApp\app\src\main\AndroidManifest.xml:27:9-41
+	android:name
+		ADDED from C:\Users\user\Desktop\SmartHotelApp\app\src\main\AndroidManifest.xml:26:9-47
+activity#com.example.luoxuechun.myapplication.ui.OrderResultsActivity
+ADDED from C:\Users\user\Desktop\SmartHotelApp\app\src\main\AndroidManifest.xml:34:9-42:20
+	android:label
+		ADDED from C:\Users\user\Desktop\SmartHotelApp\app\src\main\AndroidManifest.xml:36:13-45
+	android:name
+		ADDED from C:\Users\user\Desktop\SmartHotelApp\app\src\main\AndroidManifest.xml:35:13-52
+activity#com.example.luoxuechun.myapplication.ui.RoomResultsDetailActivity
+ADDED from C:\Users\user\Desktop\SmartHotelApp\app\src\main\AndroidManifest.xml:43:9-51:20
+	android:label
+		ADDED from C:\Users\user\Desktop\SmartHotelApp\app\src\main\AndroidManifest.xml:45:13-45
+	android:name
+		ADDED from C:\Users\user\Desktop\SmartHotelApp\app\src\main\AndroidManifest.xml:44:13-57
+uses-permission#android.permission.INTERNET
+ADDED from C:\Users\user\Desktop\SmartHotelApp\app\src\main\AndroidManifest.xml:53:5-66
+	android:name
+		ADDED from C:\Users\user\Desktop\SmartHotelApp\app\src\main\AndroidManifest.xml:53:22-64
+>>>>>>> origin/master
 uses-sdk
-INJECTED from /Users/luoxuechun/MyApplication/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
-MERGED from [com.android.support:appcompat-v7:24.2.1] /Users/luoxuechun/MyApplication/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.1/AndroidManifest.xml:21:5-23:78
-MERGED from [com.android.support:support-v4:24.2.1] /Users/luoxuechun/MyApplication/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.2.1/AndroidManifest.xml:21:5-23:54
-MERGED from [com.android.support:support-compat:24.2.1] /Users/luoxuechun/MyApplication/app/build/intermediates/exploded-aar/com.android.support/support-compat/24.2.1/AndroidManifest.xml:21:5-23:58
-MERGED from [com.android.support:support-media-compat:24.2.1] /Users/luoxuechun/MyApplication/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/24.2.1/AndroidManifest.xml:21:5-23:63
-MERGED from [com.android.support:support-compat:24.2.1] /Users/luoxuechun/MyApplication/app/build/intermediates/exploded-aar/com.android.support/support-compat/24.2.1/AndroidManifest.xml:21:5-23:58
-MERGED from [com.android.support:support-core-utils:24.2.1] /Users/luoxuechun/MyApplication/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/24.2.1/AndroidManifest.xml:21:5-23:61
-MERGED from [com.android.support:support-compat:24.2.1] /Users/luoxuechun/MyApplication/app/build/intermediates/exploded-aar/com.android.support/support-compat/24.2.1/AndroidManifest.xml:21:5-23:58
-MERGED from [com.android.support:support-core-ui:24.2.1] /Users/luoxuechun/MyApplication/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/24.2.1/AndroidManifest.xml:21:5-23:58
-MERGED from [com.android.support:support-compat:24.2.1] /Users/luoxuechun/MyApplication/app/build/intermediates/exploded-aar/com.android.support/support-compat/24.2.1/AndroidManifest.xml:21:5-23:58
-MERGED from [com.android.support:support-fragment:24.2.1] /Users/luoxuechun/MyApplication/app/build/intermediates/exploded-aar/com.android.support/support-fragment/24.2.1/AndroidManifest.xml:21:5-23:60
-MERGED from [com.android.support:support-compat:24.2.1] /Users/luoxuechun/MyApplication/app/build/intermediates/exploded-aar/com.android.support/support-compat/24.2.1/AndroidManifest.xml:21:5-23:58
-MERGED from [com.android.support:support-media-compat:24.2.1] /Users/luoxuechun/MyApplication/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/24.2.1/AndroidManifest.xml:21:5-23:63
-MERGED from [com.android.support:support-compat:24.2.1] /Users/luoxuechun/MyApplication/app/build/intermediates/exploded-aar/com.android.support/support-compat/24.2.1/AndroidManifest.xml:21:5-23:58
-MERGED from [com.android.support:support-core-ui:24.2.1] /Users/luoxuechun/MyApplication/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/24.2.1/AndroidManifest.xml:21:5-23:58
-MERGED from [com.android.support:support-compat:24.2.1] /Users/luoxuechun/MyApplication/app/build/intermediates/exploded-aar/com.android.support/support-compat/24.2.1/AndroidManifest.xml:21:5-23:58
-MERGED from [com.android.support:support-core-utils:24.2.1] /Users/luoxuechun/MyApplication/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/24.2.1/AndroidManifest.xml:21:5-23:61
-MERGED from [com.android.support:support-compat:24.2.1] /Users/luoxuechun/MyApplication/app/build/intermediates/exploded-aar/com.android.support/support-compat/24.2.1/AndroidManifest.xml:21:5-23:58
-MERGED from [com.android.support:support-vector-drawable:24.2.1] /Users/luoxuechun/MyApplication/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/24.2.1/AndroidManifest.xml:21:5-43
-MERGED from [com.android.support:support-compat:24.2.1] /Users/luoxuechun/MyApplication/app/build/intermediates/exploded-aar/com.android.support/support-compat/24.2.1/AndroidManifest.xml:21:5-23:58
-MERGED from [com.android.support:animated-vector-drawable:24.2.1] /Users/luoxuechun/MyApplication/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/24.2.1/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-vector-drawable:24.2.1] /Users/luoxuechun/MyApplication/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/24.2.1/AndroidManifest.xml:21:5-43
-MERGED from [com.android.support:support-compat:24.2.1] /Users/luoxuechun/MyApplication/app/build/intermediates/exploded-aar/com.android.support/support-compat/24.2.1/AndroidManifest.xml:21:5-23:58
-MERGED from [com.android.support:design:24.2.1] /Users/luoxuechun/MyApplication/app/build/intermediates/exploded-aar/com.android.support/design/24.2.1/AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:support-v4:24.2.1] /Users/luoxuechun/MyApplication/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.2.1/AndroidManifest.xml:21:5-23:54
-MERGED from [com.android.support:support-compat:24.2.1] /Users/luoxuechun/MyApplication/app/build/intermediates/exploded-aar/com.android.support/support-compat/24.2.1/AndroidManifest.xml:21:5-23:58
-MERGED from [com.android.support:support-media-compat:24.2.1] /Users/luoxuechun/MyApplication/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/24.2.1/AndroidManifest.xml:21:5-23:63
-MERGED from [com.android.support:support-compat:24.2.1] /Users/luoxuechun/MyApplication/app/build/intermediates/exploded-aar/com.android.support/support-compat/24.2.1/AndroidManifest.xml:21:5-23:58
-MERGED from [com.android.support:support-core-utils:24.2.1] /Users/luoxuechun/MyApplication/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/24.2.1/AndroidManifest.xml:21:5-23:61
-MERGED from [com.android.support:support-compat:24.2.1] /Users/luoxuechun/MyApplication/app/build/intermediates/exploded-aar/com.android.support/support-compat/24.2.1/AndroidManifest.xml:21:5-23:58
-MERGED from [com.android.support:support-core-ui:24.2.1] /Users/luoxuechun/MyApplication/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/24.2.1/AndroidManifest.xml:21:5-23:58
-MERGED from [com.android.support:support-compat:24.2.1] /Users/luoxuechun/MyApplication/app/build/intermediates/exploded-aar/com.android.support/support-compat/24.2.1/AndroidManifest.xml:21:5-23:58
-MERGED from [com.android.support:support-fragment:24.2.1] /Users/luoxuechun/MyApplication/app/build/intermediates/exploded-aar/com.android.support/support-fragment/24.2.1/AndroidManifest.xml:21:5-23:60
-MERGED from [com.android.support:support-compat:24.2.1] /Users/luoxuechun/MyApplication/app/build/intermediates/exploded-aar/com.android.support/support-compat/24.2.1/AndroidManifest.xml:21:5-23:58
-MERGED from [com.android.support:support-media-compat:24.2.1] /Users/luoxuechun/MyApplication/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/24.2.1/AndroidManifest.xml:21:5-23:63
-MERGED from [com.android.support:support-compat:24.2.1] /Users/luoxuechun/MyApplication/app/build/intermediates/exploded-aar/com.android.support/support-compat/24.2.1/AndroidManifest.xml:21:5-23:58
-MERGED from [com.android.support:support-core-ui:24.2.1] /Users/luoxuechun/MyApplication/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/24.2.1/AndroidManifest.xml:21:5-23:58
-MERGED from [com.android.support:support-compat:24.2.1] /Users/luoxuechun/MyApplication/app/build/intermediates/exploded-aar/com.android.support/support-compat/24.2.1/AndroidManifest.xml:21:5-23:58
-MERGED from [com.android.support:support-core-utils:24.2.1] /Users/luoxuechun/MyApplication/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/24.2.1/AndroidManifest.xml:21:5-23:61
-MERGED from [com.android.support:support-compat:24.2.1] /Users/luoxuechun/MyApplication/app/build/intermediates/exploded-aar/com.android.support/support-compat/24.2.1/AndroidManifest.xml:21:5-23:58
-MERGED from [com.android.support:appcompat-v7:24.2.1] /Users/luoxuechun/MyApplication/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.1/AndroidManifest.xml:21:5-23:78
-MERGED from [com.android.support:support-v4:24.2.1] /Users/luoxuechun/MyApplication/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.2.1/AndroidManifest.xml:21:5-23:54
-MERGED from [com.android.support:support-compat:24.2.1] /Users/luoxuechun/MyApplication/app/build/intermediates/exploded-aar/com.android.support/support-compat/24.2.1/AndroidManifest.xml:21:5-23:58
-MERGED from [com.android.support:support-media-compat:24.2.1] /Users/luoxuechun/MyApplication/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/24.2.1/AndroidManifest.xml:21:5-23:63
-MERGED from [com.android.support:support-compat:24.2.1] /Users/luoxuechun/MyApplication/app/build/intermediates/exploded-aar/com.android.support/support-compat/24.2.1/AndroidManifest.xml:21:5-23:58
-MERGED from [com.android.support:support-core-utils:24.2.1] /Users/luoxuechun/MyApplication/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/24.2.1/AndroidManifest.xml:21:5-23:61
-MERGED from [com.android.support:support-compat:24.2.1] /Users/luoxuechun/MyApplication/app/build/intermediates/exploded-aar/com.android.support/support-compat/24.2.1/AndroidManifest.xml:21:5-23:58
-MERGED from [com.android.support:support-core-ui:24.2.1] /Users/luoxuechun/MyApplication/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/24.2.1/AndroidManifest.xml:21:5-23:58
-MERGED from [com.android.support:support-compat:24.2.1] /Users/luoxuechun/MyApplication/app/build/intermediates/exploded-aar/com.android.support/support-compat/24.2.1/AndroidManifest.xml:21:5-23:58
-MERGED from [com.android.support:support-fragment:24.2.1] /Users/luoxuechun/MyApplication/app/build/intermediates/exploded-aar/com.android.support/support-fragment/24.2.1/AndroidManifest.xml:21:5-23:60
-MERGED from [com.android.support:support-compat:24.2.1] /Users/luoxuechun/MyApplication/app/build/intermediates/exploded-aar/com.android.support/support-compat/24.2.1/AndroidManifest.xml:21:5-23:58
-MERGED from [com.android.support:support-media-compat:24.2.1] /Users/luoxuechun/MyApplication/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/24.2.1/AndroidManifest.xml:21:5-23:63
-MERGED from [com.android.support:support-compat:24.2.1] /Users/luoxuechun/MyApplication/app/build/intermediates/exploded-aar/com.android.support/support-compat/24.2.1/AndroidManifest.xml:21:5-23:58
-MERGED from [com.android.support:support-core-ui:24.2.1] /Users/luoxuechun/MyApplication/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/24.2.1/AndroidManifest.xml:21:5-23:58
-MERGED from [com.android.support:support-compat:24.2.1] /Users/luoxuechun/MyApplication/app/build/intermediates/exploded-aar/com.android.support/support-compat/24.2.1/AndroidManifest.xml:21:5-23:58
-MERGED from [com.android.support:support-core-utils:24.2.1] /Users/luoxuechun/MyApplication/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/24.2.1/AndroidManifest.xml:21:5-23:61
-MERGED from [com.android.support:support-compat:24.2.1] /Users/luoxuechun/MyApplication/app/build/intermediates/exploded-aar/com.android.support/support-compat/24.2.1/AndroidManifest.xml:21:5-23:58
-MERGED from [com.android.support:support-vector-drawable:24.2.1] /Users/luoxuechun/MyApplication/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/24.2.1/AndroidManifest.xml:21:5-43
-MERGED from [com.android.support:support-compat:24.2.1] /Users/luoxuechun/MyApplication/app/build/intermediates/exploded-aar/com.android.support/support-compat/24.2.1/AndroidManifest.xml:21:5-23:58
-MERGED from [com.android.support:animated-vector-drawable:24.2.1] /Users/luoxuechun/MyApplication/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/24.2.1/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-vector-drawable:24.2.1] /Users/luoxuechun/MyApplication/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/24.2.1/AndroidManifest.xml:21:5-43
-MERGED from [com.android.support:support-compat:24.2.1] /Users/luoxuechun/MyApplication/app/build/intermediates/exploded-aar/com.android.support/support-compat/24.2.1/AndroidManifest.xml:21:5-23:58
-MERGED from [com.android.support:recyclerview-v7:24.2.1] /Users/luoxuechun/MyApplication/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/24.2.1/AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:support-compat:24.2.1] /Users/luoxuechun/MyApplication/app/build/intermediates/exploded-aar/com.android.support/support-compat/24.2.1/AndroidManifest.xml:21:5-23:58
-MERGED from [com.android.support:support-core-ui:24.2.1] /Users/luoxuechun/MyApplication/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/24.2.1/AndroidManifest.xml:21:5-23:58
-MERGED from [com.android.support:support-compat:24.2.1] /Users/luoxuechun/MyApplication/app/build/intermediates/exploded-aar/com.android.support/support-compat/24.2.1/AndroidManifest.xml:21:5-23:58
+INJECTED from C:\Users\user\Desktop\SmartHotelApp\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+MERGED from [com.android.support:design:24.2.1] C:\Users\user\.android\build-cache\78edb10a98353ee56783ed2cf7e3156585869ced\output\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:appcompat-v7:24.2.1] C:\Users\user\.android\build-cache\9b0fdc214fe352ea317bd55bae9849b14f83168e\output\AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:support-v4:24.2.1] C:\Users\user\.android\build-cache\5d4c76fc2a7b58b759232ca8e7372cf71bfaad10\output\AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-fragment:24.2.1] C:\Users\user\.android\build-cache\a17a65206c6e0b5a0f0b21fc6b8a1c01edff1f51\output\AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-media-compat:24.2.1] C:\Users\user\.android\build-cache\bcaed5353135e72dde2c0114ae59fb4fe3eee2d2\output\AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-core-utils:24.2.1] C:\Users\user\.android\build-cache\2fcce44145f1df0216658310381417e3733139b5\output\AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:animated-vector-drawable:24.2.1] C:\Users\user\.android\build-cache\ed94d1bc489c30794b9fe5207838346ccb9bacab\output\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:24.2.1] C:\Users\user\.android\build-cache\c0d34135e2697c0bd00e8d765e8d9f1f90183b2c\output\AndroidManifest.xml:21:5-43
+MERGED from [com.android.support:recyclerview-v7:24.2.1] C:\Users\user\.android\build-cache\ec4857c4eca6037fad8ba9dd2f30504d103be826\output\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-core-ui:24.2.1] C:\Users\user\.android\build-cache\5b50782de9e34fc8c89330c7efe47bd4c3e021d1\output\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-compat:24.2.1] C:\Users\user\.android\build-cache\fb881195be6488a24081f1d79ec0f19c51c836dd\output\AndroidManifest.xml:21:5-23:58
 	tools:overrideLibrary
-		ADDED from [com.android.support:appcompat-v7:24.2.1] /Users/luoxuechun/MyApplication/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.1/AndroidManifest.xml:23:9-75
+		ADDED from [com.android.support:appcompat-v7:24.2.1] C:\Users\user\.android\build-cache\9b0fdc214fe352ea317bd55bae9849b14f83168e\output\AndroidManifest.xml:23:9-75
 	android:targetSdkVersion
-		INJECTED from /Users/luoxuechun/MyApplication/app/src/main/AndroidManifest.xml
-		INJECTED from /Users/luoxuechun/MyApplication/app/src/main/AndroidManifest.xml
+		INJECTED from C:\Users\user\Desktop\SmartHotelApp\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\user\Desktop\SmartHotelApp\app\src\main\AndroidManifest.xml
 	android:minSdkVersion
-		INJECTED from /Users/luoxuechun/MyApplication/app/src/main/AndroidManifest.xml
-		INJECTED from /Users/luoxuechun/MyApplication/app/src/main/AndroidManifest.xml
+		INJECTED from C:\Users\user\Desktop\SmartHotelApp\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\user\Desktop\SmartHotelApp\app\src\main\AndroidManifest.xml
