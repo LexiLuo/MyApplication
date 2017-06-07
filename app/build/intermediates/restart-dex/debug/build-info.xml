@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <<<<<<< HEAD
+<<<<<<< HEAD
 <instant-run
     abi="x86"
     api-level="25"
@@ -38,6 +39,8 @@
 
 </instant-run>
 =======
+=======
+>>>>>>> origin/master
 <instant-run
     abi="arm64-v8a,armeabi-v7a,armeabi"
     api-level="23"
@@ -142,4 +145,7 @@
     </build>
 
 </instant-run>
+<<<<<<< HEAD
+>>>>>>> origin/master
+=======
 >>>>>>> origin/master

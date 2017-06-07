@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <<<<<<< HEAD
+<<<<<<< HEAD
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.luoxuechun.myapplication"
     android:versionCode="1"
@@ -54,6 +55,8 @@
     </application>
 
 =======
+=======
+>>>>>>> origin/master
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.luoxuechun.myapplication"
     android:versionCode="1"
@@ -113,5 +116,8 @@
         </activity>
     </application>
 
+<<<<<<< HEAD
+>>>>>>> origin/master
+=======
 >>>>>>> origin/master
 </manifest>
