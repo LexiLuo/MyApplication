@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -19,22 +20,25 @@ import java.util.ArrayList;
 /**
  * Created by luoxuechun on 2017/6/5.
  */
-public class RoomResultsDetailActivity extends AppCompatActivity {
+public class RoomResultsDetailActivity extends  BaseAppCompatActivity {
 
     private RecyclerView mRecyclerView;
     private ArrayList<String> mDatas;
     private HomeAdapter mAdapter;
     private TextView originPrice2;
     private TextView location;
-    private TextView hotelName;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_room_results_detail);
+
+       // setContentView(R.layout.activity_room_results_detail);
+
         initData();
         Intent intent=getIntent();
+        setToolBarTitle(intent.getStringExtra("hotelName"));
+
         mRecyclerView=(RecyclerView)findViewById(R.id.recycleView);
         LinearLayoutManager linearLayoutManagerHorizontal = new LinearLayoutManager(this);
         linearLayoutManagerHorizontal.setOrientation(LinearLayoutManager.VERTICAL);
@@ -49,6 +53,11 @@ public class RoomResultsDetailActivity extends AppCompatActivity {
         location.setText(intent.getStringExtra("hotelLocation"));
    //     hotelName.setText(intent.getStringExtra("hotelName"));
 
+    }
+
+    @Override
+    protected int getLayoutId() {
+        return R.layout.activity_room_results_detail;
     }
 
     protected void initData()

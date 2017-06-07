@@ -16,7 +16,8 @@
         android:textColor="@color/white"
         android:text="subtitle"
         android:paddingRight="10dp"
-        android:layout_gravity="right" />
+        android:layout_gravity="right"
+        android:textAlignment="center" />
 
     <TextView
         android:id="@+id/toolbar_title"
@@ -28,6 +29,9 @@
         android:text="title"
         android:scrollHorizontally="true"
         android:textColor="@color/white"
-        android:layout_gravity="center" />
+        android:layout_gravity="center"
+        android:textSize="28dp"
+        android:textIsSelectable="true"
+        android:textAlignment="center" />
 
 </android.support.v7.widget.Toolbar>

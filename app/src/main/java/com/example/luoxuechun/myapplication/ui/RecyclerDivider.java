@@ -8,7 +8,6 @@ import android.graphics.drawable.Drawable;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 
-import com.example.luoxuechun.myapplication.R;
 
 /**
  * Created by luoxuechun on 2017/6/5.

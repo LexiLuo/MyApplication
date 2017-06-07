@@ -28,6 +28,8 @@
         android:text="title"
         android:scrollHorizontally="true"
         android:textColor="@color/white"
-        android:layout_gravity="center" />
+        android:layout_gravity="center"
+        android:textSize="30dp"
+        android:textIsSelectable="true" />
 
 </android.support.v7.widget.Toolbar>

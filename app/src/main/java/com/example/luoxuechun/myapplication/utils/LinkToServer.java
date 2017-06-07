@@ -1,9 +1,17 @@
 package com.example.luoxuechun.myapplication.utils;
-import java.io.*;
-import java.net.*;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.OutputStream;
+import java.net.HttpURLConnection;
+import java.net.URL;
+
 /**
- * Created by luoxuechun on 2017/5/19.
+ * Created by zcy on 2017/6/7.
+ *
  */
+
 public class LinkToServer {
     /**
      * 向指定URL发送GET方法的请求
@@ -13,49 +21,40 @@ public class LinkToServer {
      */
     public static String sendGet(String url, String param) {
         //TODO 未来部署的服务器链接头
-        String header="http://localhost:8080";
-        StringBuffer json=new StringBuffer();
-        try {
-            param = URLEncoder.encode(param, "utf-8");
-            // 如有中文一定要加上，在接收方用相应字符转码即可
-        } catch (UnsupportedEncodingException e1) {
-            // TODO Auto-generated catch block
-            e1.printStackTrace();
-        }
+        String header="http://localhost:8080/api";
+        StringBuilder responseData = new StringBuilder();
         try {
             String urlString = header+ url;
-            if(param!="") {
-                urlString = header + url + "?" + param;
+            URL realUrl = new URL(urlString);
+
+            HttpURLConnection conn = (HttpURLConnection) realUrl.openConnection();
+            conn.setConnectTimeout(5000);
+            conn.setDoOutput(true);//设置允许输出
+            conn.setRequestMethod("GET");
+            conn.setRequestProperty("User-Agent", "Fiddler");
+            conn.setRequestProperty("Content-Type", "application/json");
+            conn.setRequestProperty("Charset", "utf-8");
+            OutputStream os = conn.getOutputStream();
+            os.write(param.getBytes());
+            os.close();
+            /*服务器返回的响应码*/
+            int code = conn.getResponseCode();
+            if(code==200){
+                System.out.println("success!");
+                BufferedReader in = new BufferedReader(new InputStreamReader(conn.getInputStream(), "utf-8"));
+                String retData = null;
+                while((retData = in.readLine()) != null)
+                {
+                    responseData.append(retData);
+                }
+            }else{
+                System.out.println("fail");
             }
 
-            URL realUrl = new URL(new String(urlString.getBytes(),"utf-8"));
-            // 打开和URL之间的连接
-            HttpURLConnection connection = (HttpURLConnection) realUrl.openConnection();
-//            connection.addRequestProperty("Content-Type","application/x-www-form-urlencoded; charset=UTF-8");
-//            connection.setRequestProperty("Content-type", "text/html");
-//            connection.setRequestProperty("Accept-Charset", "utf-8");
-//            connection.setRequestProperty("contentType", "utf-8");
-            // 建立实际的连接
-            connection.connect();
-            // 获取所有响应头字段
-            /*
-             * Map<String, List<String>> map = connection.getHeaderFields(); //
-             * 遍历所有的响应头字段 for (String key : map.keySet()) {
-             * System.out.println(key + "--->" + map.get(key)); }
-             */
-            // 定义 BufferedReader输入流来读取URL的响应
-            BufferedReader in = new BufferedReader(new InputStreamReader(connection.getInputStream(),"utf-8"));
-            String inputLine = null;
-            while ( (inputLine = in.readLine()) != null) {
-                json.append(inputLine);
-            }
-            in.close();
-        } catch (MalformedURLException e) {
-            e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
         }
-        return json.toString();
+        return responseData.toString();
     }
 
     /**
@@ -67,53 +66,49 @@ public class LinkToServer {
      */
     public static String sendPost(String url, String param) {
         //TODO 未来部署的服务器链接头
-        String header="http://localhost:8080";
-
-        StringBuffer json=new StringBuffer();
-        PrintWriter out = null;
-
+        String header="http://localhost:8080/api";
+        StringBuilder responseData = new StringBuilder();
         try {
             String urlString = header+ url;
             URL realUrl = new URL(urlString);
-            // 打开和URL之间的连接
-            HttpURLConnection conn = (HttpURLConnection) realUrl.openConnection();
-            conn.setRequestMethod("POST");
 
-            // 发送POST请求必须设置如下两行
-            conn.setDoOutput(true);
-            DataOutputStream wr = new DataOutputStream(conn.getOutputStream());
-            wr.writeBytes(param);
-            wr.flush();
-            wr.close();
-//            conn.setDoInput(true);
-//            // 获取URLConnection对象对应的输出流
-//            out = new PrintWriter(conn.getOutputStream());
-//            // 发送请求参数
-//            out.print(param);
-//            // flush输出流的缓冲
-//            out.flush();
-            // 定义BufferedReader输入流来读取URL的响应
-            BufferedReader in = new BufferedReader(new InputStreamReader(conn.getInputStream()));
-            String inputLine = null;
-            while ( (inputLine = in.readLine()) != null) {
-                json.append(inputLine);
+            HttpURLConnection conn = (HttpURLConnection) realUrl.openConnection();
+            conn.setConnectTimeout(5000);
+            conn.setDoOutput(true);//设置允许输出
+            conn.setRequestMethod("POST");
+            conn.setRequestProperty("User-Agent", "Fiddler");
+            conn.setRequestProperty("Content-Type", "application/json");
+            conn.setRequestProperty("Charset", "utf-8");
+            OutputStream os = conn.getOutputStream();
+            os.write(param.getBytes());
+            os.close();
+            /*服务器返回的响应码*/
+            int code = conn.getResponseCode();
+            if(code==200){
+                System.out.println("success!");
+                BufferedReader in = new BufferedReader(new InputStreamReader(conn.getInputStream(), "utf-8"));
+                String retData = null;
+                while((retData = in.readLine()) != null)
+                {
+                    responseData.append(retData);
+                }
+            }else{
+                System.out.println("fail");
             }
-            in.close();
-        }  catch (MalformedURLException e) {
-            e.printStackTrace();
+
         } catch (IOException e) {
             e.printStackTrace();
         }
-        return json.toString();
+        return responseData.toString();
     }
 
     public static void main(String args[]){
-        LinkToServer link = new LinkToServer();
-        String login="/login/result";
+        String login="/login";
 //        String userName="userName=aaa&password=11111";
-//        System.out.print(link.sendGet(login,userName));
-        String modifyPw = "/modifyPassword";
-        System.out.print(link.sendPost(modifyPw,"username=aaa&newpw=12345"));
-    }
+        String param = "{ 'name':'hqq', 'password' :'123', 'type' :'tenant'}";
+        System.out.print(LinkToServer.sendPost(login,param));
+//        String modifyPw = "/modifyPassword";
+//        System.out.print(link.sendPost(modifyPw,"username=aaa&newpw=12345"));
 
+    }
 }

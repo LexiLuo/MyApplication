@@ -1,0 +1,4 @@
+CHANGED,/Users/luoxuechun/MyApplication/app/build/intermediates/transforms/instantRun/debug/folders/4000/5/enhanced/com/example/luoxuechun/myapplication/ui/BaseAppCompatActivity$1$override.class
+CHANGED,/Users/luoxuechun/MyApplication/app/build/intermediates/transforms/instantRun/debug/folders/4000/5/enhanced/com/example/luoxuechun/myapplication/ui/BaseAppCompatActivity$override.class
+CHANGED,/Users/luoxuechun/MyApplication/app/build/intermediates/transforms/instantRun/debug/folders/4000/5/enhanced/com/example/luoxuechun/myapplication/ui/LoginActivity$override.class
+CHANGED,/Users/luoxuechun/MyApplication/app/build/intermediates/transforms/instantRun/debug/folders/4000/5/enhanced/com/android/tools/fd/runtime/AppPatchesLoaderImpl.class

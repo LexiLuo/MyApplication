@@ -33,16 +33,17 @@ public abstract class BaseAppCompatActivity extends AppCompatActivity {
         mToolbarTitle = (TextView) findViewById(R.id.toolbar_title);
         mToolbarSubTitle = (TextView) findViewById(R.id.toolbar_subtitle);
         mToolbar.setNavigationIcon(R.mipmap.back_icon);
-        if (mToolbar != null) {
-            //将Toolbar显示到界面
-            setSupportActionBar(mToolbar);
-        }
-        if (mToolbarTitle != null) {
-            //getTitle()的值是activity的android:lable属性值
-            mToolbarTitle.setText(getTitle());
-            //设置默认的标题不显示
-            getSupportActionBar().setDisplayShowTitleEnabled(false);
-        }
+ //       mToolbarTitle.setText(getTitle());
+//        if (mToolbar != null) {
+//            //将Toolbar显示到界面
+//            setSupportActionBar(mToolbar);
+//        }
+//        if (mToolbarTitle != null) {
+//            //getTitle()的值是activity的android:lable属性值
+//            mToolbarTitle.setText(getTitle());
+//            //设置默认的标题不显示
+//            getSupportActionBar().setDisplayShowTitleEnabled(false);
+//        }
 
     }
 
@@ -76,7 +77,7 @@ public abstract class BaseAppCompatActivity extends AppCompatActivity {
      * 设置头部标题
      * @param title
      */
-    public void setToolBarTitle(String title) {
+    public void setToolBarTitle(CharSequence title) {
         if(mToolbarTitle != null){
             mToolbarTitle.setText(title);
         }else{

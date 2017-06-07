@@ -29,6 +29,10 @@ public class LoginActivity extends BaseAppCompatActivity {
     private TextView registerLink;
     private Button tenantLoginButton, landlordLoginButton;
     private String nameValue, passValue;
+//    private TextView mToolbarTitle;
+//    private TextView mToolbarSubTitle;
+//    private Toolbar mToolbar;
+
     /**
      * ATTENTION: This was auto-generated to implement the App Indexing API.
      * See https://g.co/AppIndexing/AndroidStudio for more information.
@@ -41,10 +45,9 @@ public class LoginActivity extends BaseAppCompatActivity {
 
         super.onCreate(savedInstanceState);
 
-        setContentView(R.layout.activity_login);
-
         setToolBarTitle("Login");
-        getSubTitle().setText("More");
+       // setContentView(R.layout.activity_login);
+
 
         et_name = (EditText) findViewById(R.id.nameText);
         et_pass = (EditText) findViewById(R.id.passwordText);
@@ -82,26 +85,13 @@ public class LoginActivity extends BaseAppCompatActivity {
             }
         });
 
-//        WebView webview = new WebView(this);
-//        //设置WebView属性，能够执行Javascript脚本
-//        webview.getSettings().setJavaScriptEnabled(true);
-//
-//        try {
-//            //设置打开的页面地址
-//            webview.loadUrl("file:///android_asset/index_files/index.html");
-//        }
-//        catch(Exception ex)
-//        {
-//            ex.printStackTrace();
-//        }
-//        setContentView(webview);
-//
-//
+
     }
 
     @Override
     protected int getLayoutId() {
         return R.layout.activity_login;
     }
+
 
 }

@@ -24,7 +24,7 @@ import java.util.ArrayList;
 /**
  * Created by luoxuechun on 2017/6/5.
  */
-public class OrderResultsActivity extends AppCompatActivity implements AdapterView.OnItemClickListener{
+public class OrderResultsActivity extends BaseAppCompatActivity  implements AdapterView.OnItemClickListener{
 
     private ListView mListView;
 
@@ -34,7 +34,9 @@ public class OrderResultsActivity extends AppCompatActivity implements AdapterVi
     public void onCreate(Bundle savedInstanceState){
         //this.requestWindowFeature(Window.FEATURE_NO_TITLE);
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_order_results);
+        //setContentView(R.layout.activity_order_results);
+        setToolBarTitle("Order Results");
+
         mListView=(ListView)findViewById(R.id.listView);
         Resources res=this.getResources();
         mList=new ArrayList<OrderResultsEntity>();
@@ -57,6 +59,11 @@ public class OrderResultsActivity extends AppCompatActivity implements AdapterVi
         mListView.setAdapter(orderResultsAdapter);
 
 
+    }
+
+    @Override
+    protected int getLayoutId() {
+        return R.layout.activity_order_results;
     }
 
     @Override
