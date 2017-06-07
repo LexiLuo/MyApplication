@@ -27,3 +27,12 @@ build.gradle
 
 
 
+*.css
+*.html
+*.svg
+*.js
+*.json
+*.json
+*.json
+*.json
+*.class

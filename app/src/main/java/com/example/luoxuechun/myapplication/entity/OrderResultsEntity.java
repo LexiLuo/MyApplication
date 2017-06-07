@@ -18,13 +18,16 @@ public class OrderResultsEntity {
     private double points;//系统评分
     private ArrayList<String> tags;//酒店标签
 
-    public OrderResultsEntity(double originPrice,double currentPrice,String location,String name,double points,ArrayList<String> tags){
+    private String negotiation;
+
+    public OrderResultsEntity(double originPrice,double currentPrice,String location,String name,double points,ArrayList<String> tags,String negotiation){
         this.originPrice=originPrice;
         this.currentPrice=currentPrice;
         this.location=location;
         this.name=name;
         this.points=points;
         this.tags=tags;
+        this.negotiation=negotiation;
 
     }
 
@@ -74,5 +77,13 @@ public class OrderResultsEntity {
 
     public void setLocation(String location) {
         this.location = location;
+    }
+
+    public String getNegotiation() {
+        return negotiation;
+    }
+
+    public void setNegotiation(String negotiation) {
+        this.negotiation = negotiation;
     }
 }

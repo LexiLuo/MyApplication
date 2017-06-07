@@ -10,6 +10,7 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.RatingBar;
 import android.widget.TextView;
 
 import com.example.luoxuechun.myapplication.R;
@@ -32,7 +33,7 @@ public class OrderResultsAdapter extends BaseAdapter {
 
     private ArrayList<OrderResultsEntity> mData;
     private Context mContext;
-
+   private  String negoString;
     public OrderResultsAdapter(ArrayList<OrderResultsEntity> mData,Context mContext){
         this.mData=mData;
         this.mContext=mContext;
@@ -54,10 +55,13 @@ public class OrderResultsAdapter extends BaseAdapter {
     }
 
     @Override
-    public View getView(int position, View convertView, ViewGroup parent) {
+    public View getView(final int position, View convertView, ViewGroup parent) {
           if(convertView == null){
               convertView = LayoutInflater.from(mContext).inflate(R.layout.activity_order_results_item,parent,false);
           }
+
+
+          final ImageView imageView1=(ImageView)convertView.findViewById(R.id.hotelPicture);
 
 
         final TextView originPrice=(TextView)convertView.findViewById(R.id.originPrice);
@@ -73,9 +77,23 @@ public class OrderResultsAdapter extends BaseAdapter {
         Button decideButton=(Button)convertView.findViewById(R.id.decideButton);
 
 
+        if(mData.get(position).getName().equals("Jiaxin Hotel")){
+            imageView1.setBackgroundResource(R.mipmap.timg1);
+        }else if(mData.get(position).getName().equals("Jiayu Hotel")){
+            imageView1.setBackgroundResource(R.mipmap.timg2);
+        }else if(mData.get(position).getName().equals("Inn De Hotel")){
+            imageView1.setBackgroundResource(R.mipmap.timg3);
+        }else if(mData.get(position).getName().equals("Wong Kim Dinh Hotel")){
+            imageView1.setBackgroundResource(R.mipmap.timg4);
+        }
+         RatingBar ratingBar=(RatingBar)convertView.findViewById(R.id.ratingBar);
+         ratingBar.setRating((float) mData.get(position).getPoints());
+         negoString=mData.get(position).getNegotiation();
         decideButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+
 
                 //check the right of user
 
@@ -86,6 +104,7 @@ public class OrderResultsAdapter extends BaseAdapter {
                     b.putString("originPrice",originPrice.getText().toString());
                     b.putString("currentPrice",currentPrice.getText().toString());
                     b.putString("hotelLocation",hotelLocation.getText().toString());
+                    b.putString("nego",negoString);
                     intent.putExtras(b);
                     mContext.startActivity(intent);
                 }

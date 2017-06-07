@@ -11,6 +11,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.luoxuechun.myapplication.R;
@@ -27,6 +28,8 @@ public class RoomResultsDetailActivity extends  BaseAppCompatActivity {
     private HomeAdapter mAdapter;
     private TextView originPrice2;
     private TextView location;
+    private TextView currentPrice2;
+    private ImageView imageView1;
 
 
     @Override
@@ -38,14 +41,19 @@ public class RoomResultsDetailActivity extends  BaseAppCompatActivity {
         initData();
         Intent intent=getIntent();
         setToolBarTitle(intent.getStringExtra("hotelName"));
+        imageView1=(ImageView)findViewById(R.id.imageView1);
+        originPrice2=(TextView)findViewById(R.id.originText2);
+        currentPrice2=(TextView)findViewById(R.id.currentPrice2);
+        originPrice2.setText(intent.getStringExtra("originPrice"));
 
+        currentPrice2.setText(intent.getStringExtra("currentPrice"));
         mRecyclerView=(RecyclerView)findViewById(R.id.recycleView);
         LinearLayoutManager linearLayoutManagerHorizontal = new LinearLayoutManager(this);
         linearLayoutManagerHorizontal.setOrientation(LinearLayoutManager.VERTICAL);
         mRecyclerView.setLayoutManager(linearLayoutManagerHorizontal);
         mRecyclerView.addItemDecoration(new RecyclerDivider(getResources().getColor(R.color.colorDivider), 50, 2));
         mRecyclerView.setAdapter(mAdapter= new HomeAdapter());
-        originPrice2=(TextView) findViewById(R.id.originText2);
+
         originPrice2.getPaint().setFlags(Paint.STRIKE_THRU_TEXT_FLAG);
 
         location=(TextView)findViewById(R.id.locationText1);
@@ -53,6 +61,15 @@ public class RoomResultsDetailActivity extends  BaseAppCompatActivity {
         location.setText(intent.getStringExtra("hotelLocation"));
    //     hotelName.setText(intent.getStringExtra("hotelName"));
 
+        if(intent.getStringExtra("hotelName").toString().equals("Jiaxin Hotel")){
+            imageView1.setImageResource(R.mipmap.timg1);
+        }else if(intent.getStringExtra("hotelName").toString().equals("Jiayu Hotel")){
+            imageView1.setImageResource(R.mipmap.timg2);
+        }else if(intent.getStringExtra("hotelName").toString().equals("Inn De Hotel")){
+            imageView1.setImageResource(R.mipmap.timg3);
+        }else if(intent.getStringExtra("hotelName").toString().equals("Wong Kim Dinh Hotel")){
+            imageView1.setImageResource(R.mipmap.timg4);
+        }
     }
 
     @Override
@@ -62,11 +79,14 @@ public class RoomResultsDetailActivity extends  BaseAppCompatActivity {
 
     protected void initData()
     {
-        mDatas = new ArrayList<String>();
-        mDatas.add("Origin Pirce 260$");
-        mDatas.add("First Negotiation 256$");
-        mDatas.add("Second Negotiation 250$");
-        mDatas.add("Current Price 250$");
+        Intent intent=getIntent();
+       String negoString;
+        mDatas=new ArrayList<String>();
+        negoString=intent.getStringExtra("nego");
+        String[] temp=negoString.split(";") ;
+        for(int i=0;i<temp.length;i++){
+            mDatas.add(temp[i]);
+        }
     }
 
     class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.MyViewHolder>

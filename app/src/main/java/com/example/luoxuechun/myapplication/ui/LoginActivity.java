@@ -64,7 +64,7 @@ public class LoginActivity extends BaseAppCompatActivity {
 
                 if(true){
                     Intent intent=new Intent();
-                    intent.setClass(LoginActivity.this,TenantOrderActivity.class);
+                    intent.setClass(LoginActivity.this,TenantOrderTempActivity.class);
                     startActivity(intent);
                 }
             }
