@@ -21,6 +21,6 @@ app/build.gradle
 
 gradle/wrapper/gradle-wrapper.properties
 
+
 build.gradle
-*
-.idea/modules.xml
+
