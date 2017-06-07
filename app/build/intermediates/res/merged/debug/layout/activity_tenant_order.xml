@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="1"
+    android:layout_weight="1">
+    <include layout="@layout/toolbar_layout"/>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:paddingBottom="60dp">
+
+        <Button
+            android:layout_marginTop="60dp"
+            android:layout_width="280dp"
+            android:layout_height="80dp"
+            android:text="Check In/Out Date"
+            android:textSize="20dp"
+            android:id="@+id/checkDateButton"
+            android:layout_gravity="center_horizontal|top" />
+
+        <Button
+            android:layout_width="280dp"
+            android:layout_height="80dp"
+            android:text="Hotel Location"
+            android:textSize="20dp"
+            android:id="@+id/localButton"
+            android:layout_gravity="center" />
+
+        <Button
+            android:layout_width="280dp"
+            android:layout_height="80dp"
+            android:textSize="20dp"
+            android:text="Total Price"
+            android:id="@+id/priceButton"
+            android:layout_gravity="center_horizontal|bottom" />
+
+        <Button
+            android:layout_width="280dp"
+            android:layout_height="80dp"
+            android:textSize="20dp"
+            android:text="Other Requirements"
+            android:id="@+id/requirementsButton"
+            android:layout_gravity="center_horizontal" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:text="Start Ordering"
+            android:id="@+id/startOrderButton"
+            android:background="@android:color/holo_orange_dark"
+            android:textColor="#ffffff"
+            android:textSize="25dp"
+            android:layout_gravity="bottom" />
+
+    </LinearLayout>
+
+</LinearLayout>

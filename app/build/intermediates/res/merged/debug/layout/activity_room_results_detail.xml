@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/toolbar_layout"/>
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/room_example"
+        android:adjustViewBounds="true" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:baselineAligned="false"
+        android:background="@drawable/background_grey">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="10dp"
+            android:text="Wifi"
+            android:textSize="20sp"/>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:padding="10dp"
+            android:text="Yes"
+            android:textSize="20sp"
+            android:textColor="@android:color/background_dark" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="10dp"
+            android:text="Park"
+            android:textSize="20sp" />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:padding="10dp"
+            android:text="Yes"
+            android:textSize="20sp"
+            android:textColor="@android:color/background_dark" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:text="$40"
+            android:textColor="#48D1CC"
+            android:padding="10dp"
+            android:textSize="20sp"
+            android:id="@+id/locationText1" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <android.support.v7.widget.RecyclerView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/recycleView"
+                android:orientation="horizontal"
+                android:scrollIndicators="right">
+
+            </android.support.v7.widget.RecyclerView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_alignParentBottom="true"
+            android:baselineAligned="true"
+            android:paddingBottom="1dip"
+            android:gravity="bottom">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="Total Price: "
+                android:textSize="19dp"
+                android:textColor="@color/design_textinput_error_color_dark"
+                android:textStyle="bold" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.07"
+                android:layout_marginLeft="3dp"
+                android:text="280$"
+                android:textSize="18dp"
+                android:textColor="@color/button_material_dark"
+                android:id="@+id/originText2" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.18"
+                android:layout_marginLeft="1dp"
+                android:text="260$ "
+                android:textSize="19dp"
+                android:textColor="@color/design_textinput_error_color_dark"
+                android:textStyle="bold"
+                android:id="@+id/currentPrice2"
+                android:textIsSelectable="false" />
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Reserve"
+                android:background="@drawable/round_button_orange"
+                android:textColor="@color/abc_primary_text_disable_only_material_dark"
+                android:id="@+id/ReserveButton"
+                android:textSize="16dp" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</LinearLayout>
