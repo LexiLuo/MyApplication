@@ -1,18 +1,42 @@
 [
     {
-        "merged": "C:\\Users\\user\\Desktop\\SmartHotelApp\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4\\timg4.PNG",
-        "source": "C:\\Users\\user\\Desktop\\SmartHotelApp\\app\\src\\main\\res\\mipmap-hdpi\\timg4.PNG"
+        "merged": "/Users/luoxuechun/Documents/SmartHotelApp/app/build/intermediates/res/merged/debug/mipmap-hdpi-v4/timg4.PNG",
+        "source": "/Users/luoxuechun/Documents/SmartHotelApp/app/src/main/res/mipmap-hdpi/timg4.PNG"
     },
     {
-        "merged": "C:\\Users\\user\\Desktop\\SmartHotelApp\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4\\room_example.PNG",
-        "source": "C:\\Users\\user\\Desktop\\SmartHotelApp\\app\\src\\main\\res\\mipmap-hdpi\\room_example.PNG"
+        "merged": "/Users/luoxuechun/Documents/SmartHotelApp/app/build/intermediates/res/merged/debug/mipmap-hdpi-v4/aircondition_icon.png",
+        "source": "/Users/luoxuechun/Documents/SmartHotelApp/app/src/main/res/mipmap-hdpi/aircondition_icon.png"
     },
     {
-        "merged": "C:\\Users\\user\\Desktop\\SmartHotelApp\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4\\timg2.PNG",
-        "source": "C:\\Users\\user\\Desktop\\SmartHotelApp\\app\\src\\main\\res\\mipmap-hdpi\\timg2.PNG"
+        "merged": "/Users/luoxuechun/Documents/SmartHotelApp/app/build/intermediates/res/merged/debug/mipmap-hdpi-v4/timg2.PNG",
+        "source": "/Users/luoxuechun/Documents/SmartHotelApp/app/src/main/res/mipmap-hdpi/timg2.PNG"
     },
     {
-        "merged": "C:\\Users\\user\\Desktop\\SmartHotelApp\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4\\timg3.PNG",
-        "source": "C:\\Users\\user\\Desktop\\SmartHotelApp\\app\\src\\main\\res\\mipmap-hdpi\\timg3.PNG"
+        "merged": "/Users/luoxuechun/Documents/SmartHotelApp/app/build/intermediates/res/merged/debug/mipmap-hdpi-v4/ic_launcher.png",
+        "source": "/Users/luoxuechun/Documents/SmartHotelApp/app/src/main/res/mipmap-hdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/Users/luoxuechun/Documents/SmartHotelApp/app/build/intermediates/res/merged/debug/mipmap-hdpi-v4/back_icon.png",
+        "source": "/Users/luoxuechun/Documents/SmartHotelApp/app/src/main/res/mipmap-hdpi/back_icon.png"
+    },
+    {
+        "merged": "/Users/luoxuechun/Documents/SmartHotelApp/app/build/intermediates/res/merged/debug/mipmap-hdpi-v4/timg1.png",
+        "source": "/Users/luoxuechun/Documents/SmartHotelApp/app/src/main/res/mipmap-hdpi/timg1.png"
+    },
+    {
+        "merged": "/Users/luoxuechun/Documents/SmartHotelApp/app/build/intermediates/res/merged/debug/mipmap-hdpi-v4/timg3.PNG",
+        "source": "/Users/luoxuechun/Documents/SmartHotelApp/app/src/main/res/mipmap-hdpi/timg3.PNG"
+    },
+    {
+        "merged": "/Users/luoxuechun/Documents/SmartHotelApp/app/build/intermediates/res/merged/debug/mipmap-hdpi-v4/room_example.PNG",
+        "source": "/Users/luoxuechun/Documents/SmartHotelApp/app/src/main/res/mipmap-hdpi/room_example.PNG"
+    },
+    {
+        "merged": "/Users/luoxuechun/Documents/SmartHotelApp/app/build/intermediates/res/merged/debug/mipmap-hdpi-v4/park_icon.png",
+        "source": "/Users/luoxuechun/Documents/SmartHotelApp/app/src/main/res/mipmap-hdpi/park_icon.png"
+    },
+    {
+        "merged": "/Users/luoxuechun/Documents/SmartHotelApp/app/build/intermediates/res/merged/debug/mipmap-hdpi-v4/wifi.png",
+        "source": "/Users/luoxuechun/Documents/SmartHotelApp/app/src/main/res/mipmap-hdpi/wifi.png"
     }
 ]

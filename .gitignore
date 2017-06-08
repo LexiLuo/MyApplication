@@ -9,7 +9,6 @@
 
 .idea/gradle.xml
 
-.idea/gradle.xml
 
 *.gradle
 
@@ -25,14 +24,10 @@ gradle/wrapper/gradle-wrapper.properties
 build.gradle
 *.class
 
+/app/build
 
 
-*.css
-*.html
+
 *.svg
-*.js
+
 *.json
-*.json
-*.json
-*.json
-*.class
