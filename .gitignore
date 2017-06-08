@@ -1,3 +1,5 @@
+
+
 *.iml
 .gradle
 /local.properties
@@ -24,9 +26,11 @@ gradle/wrapper/gradle-wrapper.properties
 build.gradle
 *.class
 
-/app/build
 
 
+#new here
+
+*/build/
 
 *.svg
 
