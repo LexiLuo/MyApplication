@@ -94,6 +94,7 @@ public class LinkToServer {
                 }
             }else{
                 System.out.println("fail");
+                return null;
             }
 
         } catch (IOException e) {
@@ -103,9 +104,9 @@ public class LinkToServer {
     }
 
     public static void main(String args[]){
-        String login="/login";
+        String login="/tenant";
 //        String userName="userName=aaa&password=11111";
-        String param = "{ 'name':'hqq', 'password' :'123', 'type' :'tenant'}";
+        String param = "{\"userId\":\"1\",\"address\" :\"南京市南大\",\"hotelType\" :\"Business\",\"roomType\":\"Business\",\"roomNum\":\"1\",\"minPrice\":\"100\",\"maxPrice\":\"900\",\"facilities\":[\"wifi\"],\"orderTime\":\"2016-06-10\",\"startTime\":\"2016-06-11\",\"endTime\":\"2016-06-12\",}";
         System.out.print(LinkToServer.sendPost(login,param));
 //        String modifyPw = "/modifyPassword";
 //        System.out.print(link.sendPost(modifyPw,"username=aaa&newpw=12345"));

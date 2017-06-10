@@ -2,6 +2,7 @@ package com.example.luoxuechun.myapplication.ui;
 
 
 import android.content.Intent;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
@@ -13,6 +14,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 import com.example.luoxuechun.myapplication.R;
+import com.example.luoxuechun.myapplication.utils.LinkToServer;
 
 import org.w3c.dom.Text;
 
@@ -29,6 +31,8 @@ public class LoginActivity extends BaseAppCompatActivity {
     private TextView registerLink;
     private Button tenantLoginButton, landlordLoginButton;
     private String nameValue, passValue;
+    private String type;
+    private final static String url = "/login";
 //    private TextView mToolbarTitle;
 //    private TextView mToolbarSubTitle;
 //    private Toolbar mToolbar;
@@ -59,13 +63,19 @@ public class LoginActivity extends BaseAppCompatActivity {
             public void onClick(View v) {
                 nameValue = et_name.getText().toString();
                 passValue = et_pass.getText().toString();
-
+                type = "tenant";
                 //check the right of user
-
-                if(true){
+                String param = "{\"name:\""+nameValue+",\"password:\""+","+",\"type:\""+type;
+                String result = LinkToServer.sendPost(url,param);
+                if(result!=null && result.length()!=0){
                     Intent intent=new Intent();
                     intent.setClass(LoginActivity.this,TenantOrderTempActivity.class);
                     startActivity(intent);
+                }else{
+                    new AlertDialog.Builder(LoginActivity.this).setTitle("登录失败")
+                            .setMessage("账号不存在或密码错误！")
+                            .setPositiveButton("Ok", null)
+                            .show();
                 }
             }
         });
@@ -74,13 +84,20 @@ public class LoginActivity extends BaseAppCompatActivity {
             public void onClick(View v) {
                 nameValue = et_name.getText().toString();
                 passValue = et_pass.getText().toString();
-
+                type = "landlord";
                 //check the right of user
 
-                if(true){
+                String param = "{\"name:\""+nameValue+",\"password:\""+","+",\"type:\""+type;
+                String result = LinkToServer.sendPost(url,param);
+                if(result!=null && result.length()!=0){
                     Intent intent=new Intent();
-                    intent.setClass(LoginActivity.this,RoomResultsDetailActivity.class);
+                    intent.setClass(LoginActivity.this,TenantOrderTempActivity.class);
                     startActivity(intent);
+                }else{
+                    new AlertDialog.Builder(LoginActivity.this).setTitle("登录失败")
+                            .setMessage("账号不存在或密码错误！")
+                            .setPositiveButton("Ok", null)
+                            .show();
                 }
             }
         });
