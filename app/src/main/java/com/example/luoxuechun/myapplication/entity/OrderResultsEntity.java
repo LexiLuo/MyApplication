@@ -17,8 +17,7 @@ public class OrderResultsEntity {
     private String name;//酒店名称
     private double points;//系统评分
     private ArrayList<String> tags;//酒店标签
-
-    private String negotiation;
+    private String negotiation;//协商过程，每次协商用逗号隔开
 
     public OrderResultsEntity(double originPrice,double currentPrice,String location,String name,double points,ArrayList<String> tags,String negotiation){
         this.originPrice=originPrice;
