@@ -21,7 +21,7 @@ public class LinkToServer {
      */
     public static String sendGet(String url, String param) {
         //TODO 未来部署的服务器链接头
-        String header="http://localhost:8080/api";
+        String header="http://192.168.1.105:8080/api";
         StringBuilder responseData = new StringBuilder();
         try {
             String urlString = header+ url;
@@ -66,7 +66,7 @@ public class LinkToServer {
      */
     public static String sendPost(String url, String param) {
         //TODO 未来部署的服务器链接头
-        String header="http://localhost:8080/api";
+        String header="http://192.168.1.105:8080/api";
         StringBuilder responseData = new StringBuilder();
         try {
             String urlString = header+ url;
@@ -104,9 +104,10 @@ public class LinkToServer {
     }
 
     public static void main(String args[]){
-        String login="/tenant";
+        String login="/login";
 //        String userName="userName=aaa&password=11111";
-        String param = "{\"userId\":\"1\",\"address\" :\"南京市南大\",\"hotelType\" :\"Business\",\"roomType\":\"Business\",\"roomNum\":\"1\",\"minPrice\":\"100\",\"maxPrice\":\"900\",\"facilities\":[\"wifi\"],\"orderTime\":\"2016-06-10\",\"startTime\":\"2016-06-11\",\"endTime\":\"2016-06-12\",}";
+//        String param = "{\"userId\":\"1\",\"address\" :\"南京市南大\",\"hotelType\" :\"Business\",\"roomType\":\"Business\",\"roomNum\":\"1\",\"minPrice\":\"100\",\"maxPrice\":\"900\",\"facilities\":[\"wifi\"],\"orderTime\":\"2016-06-10\",\"startTime\":\"2016-06-11\",\"endTime\":\"2016-06-12\",}";
+        String param = "{ 'name':'hqq', 'password' :'123', 'type' :'tenant'}";
         System.out.print(LinkToServer.sendPost(login,param));
 //        String modifyPw = "/modifyPassword";
 //        System.out.print(link.sendPost(modifyPw,"username=aaa&newpw=12345"));

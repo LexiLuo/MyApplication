@@ -2,16 +2,21 @@ package com.example.luoxuechun.myapplication.ui;
 
 
 import android.content.Intent;
+import android.os.Handler;
+import android.os.Message;
+import android.os.StrictMode;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.View;
 import android.view.Window;
 import android.webkit.WebView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.luoxuechun.myapplication.R;
 import com.example.luoxuechun.myapplication.utils.LinkToServer;
@@ -44,6 +49,10 @@ public class LoginActivity extends BaseAppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        //为了在主线程中访问网络，所以加了这两行
+        StrictMode.ThreadPolicy policy=new StrictMode.ThreadPolicy.Builder().permitAll().build();
+        StrictMode.setThreadPolicy(policy);
+
         //remove the title
         //this.requestWindowFeature(Window.FEATURE_NO_TITLE);
 
@@ -65,8 +74,10 @@ public class LoginActivity extends BaseAppCompatActivity {
                 passValue = et_pass.getText().toString();
                 type = "tenant";
                 //check the right of user
-                String param = "{\"name:\""+nameValue+",\"password:\""+","+",\"type:\""+type;
+                String param = "{\"name\":"+"\""+nameValue+"\""+",\"password\":"+"\""+passValue+"\""+",\"type\":"+"\""+type+"\"}";
+                Log.v("param",param);
                 String result = LinkToServer.sendPost(url,param);
+                Log.v("loginact",result);
                 if(result!=null && result.length()!=0){
                     Intent intent=new Intent();
                     intent.setClass(LoginActivity.this,TenantOrderTempActivity.class);
@@ -87,7 +98,7 @@ public class LoginActivity extends BaseAppCompatActivity {
                 type = "landlord";
                 //check the right of user
 
-                String param = "{\"name:\""+nameValue+",\"password:\""+","+",\"type:\""+type;
+                String param = "{\"name\":"+"\""+nameValue+"\""+",\"password\":"+"\""+passValue+"\""+",\"type\":"+"\""+type+"\"}";
                 String result = LinkToServer.sendPost(url,param);
                 if(result!=null && result.length()!=0){
                     Intent intent=new Intent();
