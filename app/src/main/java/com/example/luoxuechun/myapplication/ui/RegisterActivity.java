@@ -29,7 +29,10 @@ public class RegisterActivity extends BaseAppCompatActivity{
         StrictMode.ThreadPolicy policy=new StrictMode.ThreadPolicy.Builder().permitAll().build();
         StrictMode.setThreadPolicy(policy);
 
-        setContentView(R.layout.activity_register);
+        super.onCreate(savedInstanceState);
+
+//        setContentView(R.layout.activity_register);
+        setToolBarTitle("Register");
 
         et_name = (EditText) findViewById(R.id.nameValue);
         et_password = (EditText) findViewById(R.id.passwordValue);
@@ -121,12 +124,18 @@ public class RegisterActivity extends BaseAppCompatActivity{
                 String param = "{\"id\":\"20\""+
                         ",\"name\":"+"\""+name_val+"\""+
                         ",\"password\":"+"\""+password_val+"\""+
-                        ",\"gender\":"+"\""+gender+"\""+
-                        ",\"phonenum\":"+"\""+phone_val+"\""+
-                        ",\"preference\":\"\""+
-                        ",\"education\":\"\""+
-                        ",\"vocation\":\"\""+
-                        ",\"economic\":\"\"}";
+                        ",\"landlordtype\":\"\""+
+                        ",\"feature\":\"\""+
+                        ",\"startprice\":\"0\""+
+                        ",\"city\":\"南京市\""+
+                        ",\"area\":\"南大\""+
+                        ",\"detailaddress\":\"\""+
+                        ",\"comment\":\"\""+
+                        ",\"longitude\":\"0\""+
+                        ",\"latitude\":\"0\""+
+                        ",\"concat\":"+"\""+phone_val+"\""+
+                        ",\"introduction\":\"\""+
+                        ",\"characteristic\":\"\"}";
                 String result = LinkToServer.sendPost(url+"/landlord",param);
                 new AlertDialog.Builder(RegisterActivity.this).setTitle("Success")
                         .setMessage(result)
@@ -136,11 +145,11 @@ public class RegisterActivity extends BaseAppCompatActivity{
             }
         });
 
-        super.onCreate(savedInstanceState);
+
     }
 
     @Override
     protected int getLayoutId() {
-        return 0;
+        return R.layout.activity_register;
     }
 }

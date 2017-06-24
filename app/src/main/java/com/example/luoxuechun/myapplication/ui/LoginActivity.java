@@ -69,6 +69,17 @@ public class LoginActivity extends BaseAppCompatActivity {
         tenantLoginButton = (Button) findViewById(R.id.tenantButton);
         landlordLoginButton = (Button) findViewById(R.id.landlordButton);
         registerLink=(TextView)findViewById(R.id.registerLink);
+
+        registerLink.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent();
+                intent.setClass(LoginActivity.this,RegisterActivity.class);
+                startActivity(intent);
+            }
+        });
+
         tenantLoginButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -140,7 +151,9 @@ public class LoginActivity extends BaseAppCompatActivity {
 
                 String param = "{\"name\":"+"\""+nameValue+"\""+",\"password\":"+"\""+passValue+"\""+",\"type\":"+"\""+type+"\"}";
                 String result = LinkToServer.sendPost(url,param);
+                Log.v("Yum",result);
                 if(result!=null && result.length()!=0){
+                    Log.v("Yum","oh");
                     Intent intent=new Intent();
                     intent.setClass(LoginActivity.this,TenantOrderTempActivity.class);
                     startActivity(intent);
