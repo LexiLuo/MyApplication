@@ -1,5 +1,6 @@
 package com.example.luoxuechun.myapplication.ui;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.StrictMode;
 import android.support.v7.app.AlertDialog;
@@ -178,6 +179,8 @@ public class RegisterActivity extends BaseAppCompatActivity{
                         .setPositiveButton("Ok", null)
                         .show();
                 //TODO 自动跳转到登录界面
+                Thread thread = new Thread(new returnToLogin());
+                thread.start();
             }
         });
 
@@ -241,5 +244,19 @@ public class RegisterActivity extends BaseAppCompatActivity{
     @Override
     protected int getLayoutId() {
         return R.layout.activity_register;
+    }
+
+    class returnToLogin implements Runnable{
+
+        @Override
+        public void run() {
+            try {
+                Thread.sleep(3000);
+                Intent intent = new Intent(RegisterActivity.this, LoginActivity.class);
+                startActivity(intent);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
     }
 }

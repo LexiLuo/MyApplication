@@ -21,7 +21,7 @@ public class LinkToServer {
      */
     public static String sendGet(String url, String param) {
         //TODO 未来部署的服务器链接头
-        String header="http://192.168.1.107:8080/api";
+        String header="http://192.168.1.105:8080/api";
         StringBuilder responseData = new StringBuilder();
         try {
             String urlString = header+ url;
@@ -66,7 +66,7 @@ public class LinkToServer {
      */
     public static String sendPost(String url, String param) {
         //TODO 未来部署的服务器链接头
-        String header="http://192.168.1.107:8080/api";
+        String header="http://192.168.1.105:8080/api";
         StringBuilder responseData = new StringBuilder();
         try {
             String urlString = header+ url;
