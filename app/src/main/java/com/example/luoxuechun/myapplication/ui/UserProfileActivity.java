@@ -1,72 +1,71 @@
 package com.example.luoxuechun.myapplication.ui;
 
+import android.app.Fragment;
+import android.app.FragmentManager;
 import android.content.Intent;
 import android.content.res.Configuration;
 import android.os.Bundle;
+import android.os.StrictMode;
 import android.support.v4.app.ActionBarDrawerToggle;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
+
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.Button;
-import android.widget.CheckBox;
-import android.widget.EditText;
 import android.widget.ListView;
-import android.widget.SeekBar;
-import android.widget.Spinner;
+import android.widget.TextView;
 
 import com.example.luoxuechun.myapplication.R;
 
-import java.util.ArrayList;
-import java.util.List;
+import org.w3c.dom.Text;
 
 /**
- * Created by zcy on 2017/6/7.
+ * Created by zcy on 2017/6/30.
  *
  */
 
-public class TenantOrderTempActivity extends BaseAppCompatActivity{
+public class UserProfileActivity extends BaseAppCompatActivity{
 
     private DrawerLayout mDrawerLayout;
     private ListView mDrawerList;
     private ActionBarDrawerToggle mDrawerToggle;
     private String[] mItemTitles;
-    private EditText checkinTime, checkoutTime, location;
-    private SeekBar price;
-    private Spinner roomType;
-    private CheckBox choose1,choose2,choose3,choose4;
-    private List<CheckBox> extra;
-    private Button confirm;
+    private String type;
+    private TextView name,gender,phone,vocation,education;
 
+    @Override
+    protected void onCreate(Bundle savedInstanceState){
+        //为了在主线程中访问网络，所以加了这两行
+        StrictMode.ThreadPolicy policy=new StrictMode.ThreadPolicy.Builder().permitAll().build();
+        StrictMode.setThreadPolicy(policy);
 
-    public void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
 
+        setToolBarTitle("User Profile");
+        name = (TextView)findViewById(R.id.nameValue_p);
+        gender = (TextView)findViewById(R.id.genderValue_p);
+        phone = (TextView)findViewById(R.id.phoneValue_p);
+        vocation = (TextView)findViewById(R.id.vocationValue_p);
+        education = (TextView)findViewById(R.id.educationValue_p);
 
-        setToolBarTitle("Order Room");
-
-        checkinTime = (EditText)findViewById(R.id.checkin_time);
-        checkoutTime = (EditText)findViewById(R.id.checkout_time);
-        location = (EditText)findViewById(R.id.location);
-        price = (SeekBar)findViewById(R.id.price_seekBar);
-        roomType = (Spinner)findViewById(R.id.type_of_room);
-        choose1 = (CheckBox)findViewById(R.id.checkBox);
-        choose2 = (CheckBox)findViewById(R.id.checkBox2);
-        choose3 = (CheckBox)findViewById(R.id.checkBox3);
-        choose4 = (CheckBox)findViewById(R.id.checkBox4);
-        confirm = (Button)findViewById(R.id.confirm_order);
-        extra = new ArrayList<>();
-        extra.add(choose1);
-        extra.add(choose2);
-        extra.add(choose3);
-        extra.add(choose4);
+        type = getIntent().getStringExtra("type");
+        String name = getIntent().getStringExtra("name");
+        String gender = getIntent().getStringExtra("gender");
+        String phone = getIntent().getStringExtra("phone");
+        String vocation = getIntent().getStringExtra("vocation");
+        String education = getIntent().getStringExtra("education");
         mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
         initListView();
 
+        this.name.setText(name);
+        this.gender.setText(gender);
+        this.phone.setText(phone);
+        this.vocation.setText(vocation);
+        this.education.setText(education);
         // set a custom shadow that overlays the main content when the drawer
         // opens
         mDrawerLayout.setDrawerShadow(R.drawable.drawer_shadow,
@@ -97,37 +96,6 @@ public class TenantOrderTempActivity extends BaseAppCompatActivity{
         // enable ActionBar app icon to behave as action to toggle nav drawer
 //        getActionBar().setDisplayHomeAsUpEnabled(true);
 
-        confirm.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                String inTime = checkinTime.getText().toString();
-                String outTime = checkoutTime.getText().toString();
-                String loca = location.getText().toString();
-                String pri = String.valueOf(price.getProgress());
-                String type = roomType.getSelectedItem()+"";
-                StringBuilder extra_requirements = new StringBuilder();
-                for(CheckBox cb:extra){
-                    if(cb.isChecked()){
-                        extra_requirements.append(cb.getText().toString()+" ");
-                    }
-                }
-
-                Bundle data = new Bundle();
-                data.putString("checkinTime",inTime);
-                data.putString("checkoutTime",outTime);
-                data.putString("location",loca);
-                data.putString("price",pri);
-                data.putString("type",type);
-                data.putString("extra_requirements",extra_requirements.toString());
-
-                Intent it = new Intent();
-                it.putExtras(data);
-
-               it.setClass(TenantOrderTempActivity.this,OrderResultsActivity.class);
-                startActivity(it);
-            }
-        });
-
     }
 
     @Override
@@ -154,7 +122,7 @@ public class TenantOrderTempActivity extends BaseAppCompatActivity{
         }
         // Handle action buttons
         Intent intent = new Intent();
-        intent.setClass(TenantOrderTempActivity.this,RegisterActivity.class);
+        intent.setClass(UserProfileActivity.this,RegisterActivity.class);
         startActivity(intent);
         return super.onOptionsItemSelected(item);
     }
@@ -163,8 +131,11 @@ public class TenantOrderTempActivity extends BaseAppCompatActivity{
     {
         mDrawerList = (ListView) findViewById(R.id.left_drawer);
 
-        mItemTitles = getResources().getStringArray(R.array.menu_array_tenant);
-
+        if(type.equals("tenant")){
+            mItemTitles = getResources().getStringArray(R.array.menu_array_tenant);
+        }else if(type.equals("landlord")){
+            mItemTitles = getResources().getStringArray(R.array.menu_array_landlord);
+        }
 
         // Set the adapter for the list view
         mDrawerList.setAdapter(new ArrayAdapter<String>(this,
@@ -188,24 +159,19 @@ public class TenantOrderTempActivity extends BaseAppCompatActivity{
                     case "Profile":
                         intent = new Intent();
                         data = new Bundle();
-                        data.putString("name","hqq");
-                        data.putString("gender","Male");
-                        data.putString("type","tenant");
-                        data.putString("phone","18972367843");
-                        data.putString("vocation","professor");
-                        data.putString("education","bachelor");
+                        data.putString("type",type);
                         intent.putExtras(data);
-                        intent.setClass(TenantOrderTempActivity.this,UserProfileActivity.class);
+                        intent.setClass(UserProfileActivity.this,UserProfileActivity.class);
                         startActivity(intent);
                         break;
                     case "Order Room":
                         intent = new Intent();
-                        intent.setClass(TenantOrderTempActivity.this,TenantOrderTempActivity.class);
+                        intent.setClass(UserProfileActivity.this,TenantOrderTempActivity.class);
                         startActivity(intent);
                         break;
                     case "Room Info":
                         intent = new Intent();
-                        intent.setClass(TenantOrderTempActivity.this,RoomInfoActivity.class);
+                        intent.setClass(UserProfileActivity.this,RoomInfoActivity.class);
                         startActivity(intent);
                         break;
                     case "Register Room":
@@ -213,7 +179,7 @@ public class TenantOrderTempActivity extends BaseAppCompatActivity{
 //                        data = new Bundle();
 //                        data.putString("type",type);
 //                        intent.putExtras(data);
-                        intent.setClass(TenantOrderTempActivity.this,RegisterRoomActivity.class);
+                        intent.setClass(UserProfileActivity.this,RegisterRoomActivity.class);
                         startActivity(intent);
                         break;
                     default:
@@ -237,9 +203,8 @@ public class TenantOrderTempActivity extends BaseAppCompatActivity{
         mDrawerToggle.onConfigurationChanged(newConfig);
     }
 
-
     @Override
     protected int getLayoutId() {
-        return R.layout.activity_tenant_order_temp;
+        return R.layout.activity_user_profile;
     }
 }

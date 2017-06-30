@@ -53,6 +53,7 @@
                 android:layout_height="wrap_content"
                 android:textSize="18dp"
                 android:layout_marginLeft="10dp"
+                android:inputType="numberPassword"
                 android:id="@+id/passwordText"/>
         </LinearLayout>
         <TextView

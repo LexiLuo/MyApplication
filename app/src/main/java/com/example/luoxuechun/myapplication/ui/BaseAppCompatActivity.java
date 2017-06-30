@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
+import android.widget.ListView;
 import android.widget.TextView;
 
 import com.example.luoxuechun.myapplication.R;
@@ -18,6 +19,7 @@ public abstract class BaseAppCompatActivity extends AppCompatActivity {
     private TextView mToolbarTitle;
     private TextView mToolbarSubTitle;
     private Toolbar mToolbar;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

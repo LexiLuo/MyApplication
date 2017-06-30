@@ -2,28 +2,17 @@ package com.example.luoxuechun.myapplication.ui;
 
 
 import android.content.Intent;
-import android.os.Handler;
-import android.os.Message;
 import android.os.StrictMode;
 import android.support.v7.app.AlertDialog;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
-import android.view.Window;
-import android.webkit.WebView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.example.luoxuechun.myapplication.R;
 import com.example.luoxuechun.myapplication.utils.LinkToServer;
-
-import org.json.JSONException;
-import org.json.JSONObject;
-import org.w3c.dom.Text;
 
 
 public class LoginActivity extends BaseAppCompatActivity {
@@ -89,53 +78,58 @@ public class LoginActivity extends BaseAppCompatActivity {
 
                 //check the right of user
                 String param = "{\"name\":"+"\""+nameValue+"\""+",\"password\":"+"\""+passValue+"\""+",\"type\":"+"\""+type+"\"}";
-                String result = LinkToServer.sendPost(url,param);
-                Log.v("loginact",result);
-
-                if(result!=null && result.length()!=0){
+//                String result = LinkToServer.sendPost(url,param);
+//                Log.d("loginact",result);
+//                if(result!=null && result.length()!=0)
+                if(nameValue.equals("hqq")&&passValue.equals("123")){
                     //登录成功,获得该用户相关数据
-                    JSONObject json = null;
-                    String economic = null;
-                    String education = null;
-                    String gender = null;
-                    int id = 0;
-                    String name = null;
-                    String password = null;
-                    String phonenum = null;
-                    String preference = null;
-                    String vocation = null;
-                    try {
-                        json = new JSONObject(result);
-                        economic = json.getString("economic");
-                        education = json.getString("education");
-                        gender = json.getString("gender");
-                        id = json.getInt("id");
-                        name = json.getString("name");
-                        password = json.getString("password");
-                        phonenum = json.getString("phonenum");
-                        preference = json.getString("preference");
-                        vocation = json.getString("vocation");
-                    } catch (JSONException e) {
-                        e.printStackTrace();
-                    }
+//                    JSONObject json = null;
+//                    String economic = null;
+//                    String education = null;
+//                    String gender = null;
+//                    int id = 0;
+//                    String name = null;
+//                    String password = null;
+//                    String phonenum = null;
+//                    String preference = null;
+//                    String vocation = null;
+//                    try {
+//                        json = new JSONObject(result);
+//                        economic = json.getString("economic");
+//                        education = json.getString("education");
+//                        gender = json.getString("gender");
+//                        id = json.getInt("id");
+//                        name = json.getString("name");
+//                        password = json.getString("password");
+//                        phonenum = json.getString("phonenum");
+//                        preference = json.getString("preference");
+//                        vocation = json.getString("vocation");
+//                    } catch (JSONException e) {
+//                        e.printStackTrace();
+//                    }
                     Bundle data = new Bundle();
-                    data.putString("economic",economic);
-                    data.putString("education",education);
-                    data.putString("gender",gender);
-                    data.putInt("id",id);
-                    data.putString("name",name);
-                    data.putString("password",password);
-                    data.putString("phonenum",phonenum);
-                    data.putString("preference",preference);
-                    data.putString("vocation",vocation);
-
+//                    data.putString("economic",economic);
+//                    data.putString("education",education);
+//                    data.putString("gender",gender);
+//                    data.putInt("id",id);
+//                    data.putString("name",name);
+//                    data.putString("password",password);
+//                    data.putString("phonenum",phonenum);
+//                    data.putString("preference",preference);
+//                    data.putString("vocation",vocation);
+                    data.putString("name",nameValue);
+                    data.putString("gender","Male");
+                    data.putString("type",type);
+                    data.putString("phone","18972367843");
+                    data.putString("vocation","professor");
+                    data.putString("education","bachelor");
                     Intent intent=new Intent();
                     intent.putExtras(data);
-                    intent.setClass(LoginActivity.this,TenantOrderTempActivity.class);
+                    intent.setClass(LoginActivity.this,UserProfileActivity.class);
                     startActivity(intent);
                 }else{
-                    new AlertDialog.Builder(LoginActivity.this).setTitle("登录失败")
-                            .setMessage("账号不存在或密码错误！")
+                    new AlertDialog.Builder(LoginActivity.this).setTitle("Login Fail")
+                            .setMessage("Your account is invalid！")
                             .setPositiveButton("Ok", null)
                             .show();
                 }
@@ -150,16 +144,22 @@ public class LoginActivity extends BaseAppCompatActivity {
                 //check the right of user
 
                 String param = "{\"name\":"+"\""+nameValue+"\""+",\"password\":"+"\""+passValue+"\""+",\"type\":"+"\""+type+"\"}";
-                String result = LinkToServer.sendPost(url,param);
-                Log.v("Yum",result);
-                if(result!=null && result.length()!=0){
-                    Log.v("Yum","oh");
+//                String result = LinkToServer.sendPost(url,param);
+                if(nameValue.equals("Jackson")&&passValue.equals("123456")){
+                    Bundle data = new Bundle();
+                    data.putString("name",nameValue);
+                    data.putString("type",type);
+                    data.putString("gender","Female");
+                    data.putString("phone","13882730983");
+                    data.putString("vocation","professor");
+                    data.putString("education","bachelor");
                     Intent intent=new Intent();
-                    intent.setClass(LoginActivity.this,TenantOrderTempActivity.class);
+                    intent.putExtras(data);
+                    intent.setClass(LoginActivity.this,UserProfileActivity.class);
                     startActivity(intent);
                 }else{
-                    new AlertDialog.Builder(LoginActivity.this).setTitle("登录失败")
-                            .setMessage("账号不存在或密码错误！")
+                    new AlertDialog.Builder(LoginActivity.this).setTitle("Login Fail")
+                            .setMessage("Your account is invalid！")
                             .setPositiveButton("Ok", null)
                             .show();
                 }

@@ -3,9 +3,11 @@ package com.example.luoxuechun.myapplication.ui;
 import android.content.Intent;
 import android.content.res.Configuration;
 import android.os.Bundle;
+import android.os.StrictMode;
 import android.support.v4.app.ActionBarDrawerToggle;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
+import android.support.v7.app.AlertDialog;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -13,60 +15,62 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
-import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.ListView;
-import android.widget.SeekBar;
-import android.widget.Spinner;
+import android.widget.TextView;
 
 import com.example.luoxuechun.myapplication.R;
 
-import java.util.ArrayList;
-import java.util.List;
-
 /**
- * Created by zcy on 2017/6/7.
+ * Created by zcy on 2017/6/30.
  *
  */
 
-public class TenantOrderTempActivity extends BaseAppCompatActivity{
-
+public class RegisterRoomActivity extends BaseAppCompatActivity{
     private DrawerLayout mDrawerLayout;
     private ListView mDrawerList;
     private ActionBarDrawerToggle mDrawerToggle;
     private String[] mItemTitles;
-    private EditText checkinTime, checkoutTime, location;
-    private SeekBar price;
-    private Spinner roomType;
-    private CheckBox choose1,choose2,choose3,choose4;
-    private List<CheckBox> extra;
-    private Button confirm;
+    private Button register;
+    private EditText name,city,area;
+    String type;
+    @Override
+    protected void onCreate(Bundle savedInstanceState){
+        //为了在主线程中访问网络，所以加了这两行
+        StrictMode.ThreadPolicy policy=new StrictMode.ThreadPolicy.Builder().permitAll().build();
+        StrictMode.setThreadPolicy(policy);
 
-
-    public void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
 
+        setToolBarTitle("Register Room");
 
-        setToolBarTitle("Order Room");
-
-        checkinTime = (EditText)findViewById(R.id.checkin_time);
-        checkoutTime = (EditText)findViewById(R.id.checkout_time);
-        location = (EditText)findViewById(R.id.location);
-        price = (SeekBar)findViewById(R.id.price_seekBar);
-        roomType = (Spinner)findViewById(R.id.type_of_room);
-        choose1 = (CheckBox)findViewById(R.id.checkBox);
-        choose2 = (CheckBox)findViewById(R.id.checkBox2);
-        choose3 = (CheckBox)findViewById(R.id.checkBox3);
-        choose4 = (CheckBox)findViewById(R.id.checkBox4);
-        confirm = (Button)findViewById(R.id.confirm_order);
-        extra = new ArrayList<>();
-        extra.add(choose1);
-        extra.add(choose2);
-        extra.add(choose3);
-        extra.add(choose4);
+        type = getIntent().getStringExtra("type");
+        register = (Button) findViewById(R.id.register_room);
+        name = (EditText)findViewById(R.id.hotelNameValue);
+        city = (EditText)findViewById(R.id.hotelCityValue);
+        area = (EditText)findViewById(R.id.hotelAreaValue);
         mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
         initListView();
 
+        register.setOnClickListener(new View.OnClickListener(){
+                @Override
+                public void onClick(View view) {
+                    if(name.getText().toString().equals("")||city.getText().toString().equals("")||area.getText().toString().equals("")){
+                        new AlertDialog.Builder(RegisterRoomActivity.this).setTitle("Register Fail")
+                                .setMessage("Please complete the information！")
+                                .setPositiveButton("Ok", null)
+                                .show();
+                    }else{
+                        new AlertDialog.Builder(RegisterRoomActivity.this).setTitle("Register Success")
+                                .setMessage("Your registration request has been submitted！")
+                                .setPositiveButton("Ok", null)
+                                .show();
+                        name.setText("");
+                        city.setText("");
+                        area.setText("");
+                    }
+                }
+        });
         // set a custom shadow that overlays the main content when the drawer
         // opens
         mDrawerLayout.setDrawerShadow(R.drawable.drawer_shadow,
@@ -97,37 +101,6 @@ public class TenantOrderTempActivity extends BaseAppCompatActivity{
         // enable ActionBar app icon to behave as action to toggle nav drawer
 //        getActionBar().setDisplayHomeAsUpEnabled(true);
 
-        confirm.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                String inTime = checkinTime.getText().toString();
-                String outTime = checkoutTime.getText().toString();
-                String loca = location.getText().toString();
-                String pri = String.valueOf(price.getProgress());
-                String type = roomType.getSelectedItem()+"";
-                StringBuilder extra_requirements = new StringBuilder();
-                for(CheckBox cb:extra){
-                    if(cb.isChecked()){
-                        extra_requirements.append(cb.getText().toString()+" ");
-                    }
-                }
-
-                Bundle data = new Bundle();
-                data.putString("checkinTime",inTime);
-                data.putString("checkoutTime",outTime);
-                data.putString("location",loca);
-                data.putString("price",pri);
-                data.putString("type",type);
-                data.putString("extra_requirements",extra_requirements.toString());
-
-                Intent it = new Intent();
-                it.putExtras(data);
-
-               it.setClass(TenantOrderTempActivity.this,OrderResultsActivity.class);
-                startActivity(it);
-            }
-        });
-
     }
 
     @Override
@@ -154,7 +127,7 @@ public class TenantOrderTempActivity extends BaseAppCompatActivity{
         }
         // Handle action buttons
         Intent intent = new Intent();
-        intent.setClass(TenantOrderTempActivity.this,RegisterActivity.class);
+        intent.setClass(RegisterRoomActivity.this,RegisterActivity.class);
         startActivity(intent);
         return super.onOptionsItemSelected(item);
     }
@@ -163,7 +136,8 @@ public class TenantOrderTempActivity extends BaseAppCompatActivity{
     {
         mDrawerList = (ListView) findViewById(R.id.left_drawer);
 
-        mItemTitles = getResources().getStringArray(R.array.menu_array_tenant);
+
+        mItemTitles = getResources().getStringArray(R.array.menu_array_landlord);
 
 
         // Set the adapter for the list view
@@ -188,32 +162,29 @@ public class TenantOrderTempActivity extends BaseAppCompatActivity{
                     case "Profile":
                         intent = new Intent();
                         data = new Bundle();
-                        data.putString("name","hqq");
-                        data.putString("gender","Male");
-                        data.putString("type","tenant");
-                        data.putString("phone","18972367843");
+                        data.putString("type","landlord");
+                        data.putString("name","Jackson");
+                        data.putString("gender","Female");
+                        data.putString("phone","13882730983");
                         data.putString("vocation","professor");
                         data.putString("education","bachelor");
                         intent.putExtras(data);
-                        intent.setClass(TenantOrderTempActivity.this,UserProfileActivity.class);
+                        intent.setClass(RegisterRoomActivity.this,UserProfileActivity.class);
                         startActivity(intent);
                         break;
                     case "Order Room":
                         intent = new Intent();
-                        intent.setClass(TenantOrderTempActivity.this,TenantOrderTempActivity.class);
+                        intent.setClass(RegisterRoomActivity.this,TenantOrderTempActivity.class);
                         startActivity(intent);
                         break;
                     case "Room Info":
                         intent = new Intent();
-                        intent.setClass(TenantOrderTempActivity.this,RoomInfoActivity.class);
+                        intent.setClass(RegisterRoomActivity.this,RoomInfoActivity.class);
                         startActivity(intent);
                         break;
                     case "Register Room":
                         intent = new Intent();
-//                        data = new Bundle();
-//                        data.putString("type",type);
-//                        intent.putExtras(data);
-                        intent.setClass(TenantOrderTempActivity.this,RegisterRoomActivity.class);
+                        intent.setClass(RegisterRoomActivity.this,RegisterRoomActivity.class);
                         startActivity(intent);
                         break;
                     default:
@@ -237,9 +208,8 @@ public class TenantOrderTempActivity extends BaseAppCompatActivity{
         mDrawerToggle.onConfigurationChanged(newConfig);
     }
 
-
     @Override
     protected int getLayoutId() {
-        return R.layout.activity_tenant_order_temp;
+        return R.layout.activity_register_room;
     }
 }

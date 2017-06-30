@@ -9,19 +9,20 @@
 
     <include layout="@layout/toolbar_layout" />
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="0.2"
-        android:layout_marginTop="10dp"
-        android:orientation="horizontal">
-    </LinearLayout>
+    <!--<LinearLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="0dp"-->
+        <!--android:layout_weight="0.2"-->
+        <!--android:layout_marginTop="10dp"-->
+        <!--android:orientation="horizontal">-->
+    <!--</LinearLayout>-->
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
+        android:layout_marginTop="20dp"
         android:layout_weight="2"
         android:orientation="vertical">
 
@@ -54,10 +55,9 @@
             android:textStyle="bold" />
 
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
             <TextView
                 android:id="@+id/name"
                 android:layout_width="0dp"
@@ -217,38 +217,39 @@
             android:layout_marginTop="10dp"
             android:background="#aa000000" />
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="10dp"
+            android:layout_weight="0.4"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/tenantRegister"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:background="@color/highlighted_text_material_dark"
+                android:text="Register  As  Tenant"
+                android:textSize="15dp" />
+
+            <Button
+                android:id="@+id/landlordRegister"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:background="@color/material_deep_teal_200"
+                android:text="Register  As  Landlord"
+                android:textSize="15dp" />
+
+        </LinearLayout>
+
 
     </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:layout_marginTop="10dp"
-        android:layout_weight="0.4"
-        android:orientation="horizontal">
-
-        <Button
-            android:id="@+id/tenantRegister"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:layout_weight="1"
-            android:background="@color/highlighted_text_material_dark"
-            android:text="Register As Tenant"
-            android:textSize="15dp" />
-
-        <Button
-            android:id="@+id/landlordRegister"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:layout_weight="1"
-            android:background="@color/material_deep_teal_200"
-            android:text="Register As Landlord"
-            android:textSize="15dp" />
-
-    </LinearLayout>
 
 </LinearLayout>

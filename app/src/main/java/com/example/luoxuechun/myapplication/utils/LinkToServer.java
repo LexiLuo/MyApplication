@@ -1,5 +1,7 @@
 package com.example.luoxuechun.myapplication.utils;
 
+import android.util.Log;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -19,9 +21,10 @@ public class LinkToServer {
      * @param param 请求参数，请求参数应该是 name1=value1&name2=value2 的形式。
      * @return URL 所代表远程资源的响应结果
      */
+    private final static String IP = "192.168.1.103";
     public static String sendGet(String url, String param) {
         //TODO 未来部署的服务器链接头
-        String header="http://192.168.1.105:8080/api";
+        String header="http://"+IP+":8080/api";
         StringBuilder responseData = new StringBuilder();
         try {
             String urlString = header+ url;
@@ -66,7 +69,7 @@ public class LinkToServer {
      */
     public static String sendPost(String url, String param) {
         //TODO 未来部署的服务器链接头
-        String header="http://192.168.1.105:8080/api";
+        String header="http://192.168.1.103:8080/api";
         StringBuilder responseData = new StringBuilder();
         try {
             String urlString = header+ url;
@@ -74,6 +77,7 @@ public class LinkToServer {
 
             HttpURLConnection conn = (HttpURLConnection) realUrl.openConnection();
             conn.setConnectTimeout(5000);
+            conn.setDoInput(true);
             conn.setDoOutput(true);//设置允许输出
             conn.setRequestMethod("POST");
             conn.setRequestProperty("User-Agent", "Fiddler");
@@ -84,6 +88,7 @@ public class LinkToServer {
             os.close();
             /*服务器返回的响应码*/
             int code = conn.getResponseCode();
+//            Log.d("yum",code+"");
             if(code==200){
                 System.out.println("success!");
                 BufferedReader in = new BufferedReader(new InputStreamReader(conn.getInputStream(), "utf-8"));
@@ -97,7 +102,7 @@ public class LinkToServer {
                 return null;
             }
 
-        } catch (IOException e) {
+        } catch (IOException | AssertionError e) {
             e.printStackTrace();
         }
         return responseData.toString();
