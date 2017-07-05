@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="cities">
+        <item>Nanjing</item>
+        <item>Shanghai</item>
+        <item>Suzhou</item>
+    </string-array>
+
+    <string-array name="districts_Nanjing">
+        <item>Qixia</item>
+        <item>Xuanwu</item>
+        <item>Gulou</item>
+        <item>Jiangning</item>
+    </string-array>
+
+    <string-array name="districts_Shanghai">
+        <item>Yangpu</item>
+        <item>Minhang</item>
+        <item>Pudong</item>
+    </string-array>
+
+    <string-array name="districts_Suzhou">
+        <item>Gusu</item>
+        <item>Xiangcheng</item>
+        <item>Huqiu</item>
+        <item>Gongyeyuan</item>
+    </string-array>
+</resources>

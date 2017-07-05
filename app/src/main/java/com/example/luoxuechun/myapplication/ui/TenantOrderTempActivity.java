@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.support.v4.app.ActionBarDrawerToggle;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -35,12 +36,13 @@ public class TenantOrderTempActivity extends BaseAppCompatActivity{
     private ListView mDrawerList;
     private ActionBarDrawerToggle mDrawerToggle;
     private String[] mItemTitles;
-    private EditText checkinTime, checkoutTime, location;
+    private EditText checkinTime, checkoutTime;
     private SeekBar price;
-    private Spinner roomType;
+    private Spinner roomType,city,district;
     private CheckBox choose1,choose2,choose3,choose4;
     private List<CheckBox> extra;
     private Button confirm;
+    private ArrayAdapter<String> adapter;
 
 
     public void onCreate(Bundle savedInstanceState){
@@ -51,7 +53,9 @@ public class TenantOrderTempActivity extends BaseAppCompatActivity{
 
         checkinTime = (EditText)findViewById(R.id.checkin_time);
         checkoutTime = (EditText)findViewById(R.id.checkout_time);
-        location = (EditText)findViewById(R.id.location);
+//        location = (EditText)findViewById(R.id.location);
+        city = (Spinner)findViewById(R.id.cityValue);
+        district = (Spinner)findViewById(R.id.districtValue);
         price = (SeekBar)findViewById(R.id.price_seekBar);
         roomType = (Spinner)findViewById(R.id.type_of_room);
         choose1 = (CheckBox)findViewById(R.id.checkBox);
@@ -65,6 +69,7 @@ public class TenantOrderTempActivity extends BaseAppCompatActivity{
         extra.add(choose3);
         extra.add(choose4);
         mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
+        adapter = new ArrayAdapter<String>(this,android.R.layout.simple_spinner_dropdown_item);
         initListView();
 
         // set a custom shadow that overlays the main content when the drawer
@@ -115,12 +120,51 @@ public class TenantOrderTempActivity extends BaseAppCompatActivity{
             }
         });
 
+        city.setOnItemSelectedListener(new Spinner.OnItemSelectedListener(){
+
+            @Override
+            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                switch (i){
+                    case 0:
+                        adapter.clear();
+                        String[] items = getResources().getStringArray(R.array.districts_Nanjing);
+                        for(int j=0;j<items.length;j++){
+                            adapter.add(items[j]);
+                        }
+                        district.setAdapter(adapter);
+                        break;
+                    case 1:
+                        adapter.clear();
+                        items = getResources().getStringArray(R.array.districts_Shanghai);
+                        for(int j=0;j<items.length;j++){
+                            adapter.add(items[j]);
+                        }
+                        district.setAdapter(adapter);
+                        break;
+                    case 2:
+                        adapter.clear();
+                        items = getResources().getStringArray(R.array.districts_Suzhou);
+                        for(int j=0;j<items.length;j++){
+                            adapter.add(items[j]);
+                        }
+                        district.setAdapter(adapter);
+                        break;
+                    default:break;
+                }
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView) {
+
+            }
+        });
+
         confirm.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 String inTime = checkinTime.getText().toString();
                 String outTime = checkoutTime.getText().toString();
-                String loca = location.getText().toString();
+//                String loca = location.getText().toString();
                 String pri = String.valueOf(price.getProgress());
                 String type = roomType.getSelectedItem()+"";
                 StringBuilder extra_requirements = new StringBuilder();
@@ -133,7 +177,7 @@ public class TenantOrderTempActivity extends BaseAppCompatActivity{
                 Bundle data = new Bundle();
                 data.putString("checkinTime",inTime);
                 data.putString("checkoutTime",outTime);
-                data.putString("location",loca);
+//                data.putString("location",loca);
                 data.putString("price",pri);
                 data.putString("type",type);
                 data.putString("extra_requirements",extra_requirements.toString());
