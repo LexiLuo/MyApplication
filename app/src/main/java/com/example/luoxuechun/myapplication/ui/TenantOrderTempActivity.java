@@ -97,6 +97,24 @@ public class TenantOrderTempActivity extends BaseAppCompatActivity{
         // enable ActionBar app icon to behave as action to toggle nav drawer
 //        getActionBar().setDisplayHomeAsUpEnabled(true);
 
+        checkinTime.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view) {
+                Intent it = new Intent();
+                it.setClass(TenantOrderTempActivity.this,DateChooseActivity.class);
+                startActivityForResult(it,0);
+            }
+        });
+
+        checkoutTime.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view) {
+                Intent it = new Intent();
+                it.setClass(TenantOrderTempActivity.this,DateChooseActivity.class);
+                startActivityForResult(it,1);
+            }
+        });
+
         confirm.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -157,6 +175,25 @@ public class TenantOrderTempActivity extends BaseAppCompatActivity{
         intent.setClass(TenantOrderTempActivity.this,RegisterActivity.class);
         startActivity(intent);
         return super.onOptionsItemSelected(item);
+    }
+
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        switch (resultCode) { //resultCode为回传的标记，我在B中回传的是RESULT_OK
+            case RESULT_OK:
+                Bundle b=data.getExtras(); //data为B中回传的Intent
+                String year=b.getString("year");
+                String month = b.getString("month");
+                String day = b.getString("day");
+                if(requestCode==0){
+                    checkinTime.setText(year+"/"+month+"/"+day);
+                }
+                else{
+                    checkoutTime.setText(year+"/"+month+"/"+day);
+                }
+                break;
+            default:
+                break;
+        }
     }
 
     private void initListView()

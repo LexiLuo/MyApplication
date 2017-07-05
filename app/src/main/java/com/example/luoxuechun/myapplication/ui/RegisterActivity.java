@@ -248,7 +248,7 @@ public class RegisterActivity extends BaseAppCompatActivity{
         return R.layout.activity_register;
     }
 
-    class returnToLogin implements Runnable{
+    private class returnToLogin implements Runnable{
 
         @Override
         public void run() {
