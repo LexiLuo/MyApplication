@@ -1,5 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string-array name="menu_array_landlord">
+        <item>Profile</item>
+        <item>Room Info</item>
+        <item>Register Room</item>
+    </string-array>
+    <string-array name="menu_array_tenant">
+        <item>Profile</item>
+        <item>Order Room</item>
+    </string-array>
     <string-array name="room_num">
         <item>1</item>
         <item>2</item>
@@ -329,10 +338,14 @@
     <string name="action_settings">Settings</string>
     <string name="action_sign_in">Sign in or register</string>
     <string name="action_sign_in_short">Sign in</string>
+    <string name="action_websearch">Web search</string>
     <string name="app_name">My Application</string>
+    <string name="app_not_available">Sorry, there\'s no web browser available</string>
     <string name="appbar_scrolling_view_behavior" translatable="false">android.support.design.widget.AppBarLayout$ScrollingViewBehavior</string>
     <string name="bottom_sheet_behavior" translatable="false">android.support.design.widget.BottomSheetBehavior</string>
     <string name="character_counter_pattern" translatable="false">%1$d / %2$d</string>
+    <string name="drawer_close">Close navigation drawer</string>
+    <string name="drawer_open">Open navigation drawer</string>
     <string name="error_field_required">This field is required</string>
     <string name="error_incorrect_password">This password is incorrect</string>
     <string name="error_invalid_email">This email address is invalid</string>

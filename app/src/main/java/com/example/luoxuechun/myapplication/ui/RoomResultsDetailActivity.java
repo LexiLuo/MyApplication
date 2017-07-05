@@ -41,6 +41,7 @@ public class RoomResultsDetailActivity extends  BaseAppCompatActivity {
         initData();
         Intent intent=getIntent();
         setToolBarTitle(intent.getStringExtra("hotelName"));
+        getSubTitle().setText("");
         imageView1=(ImageView)findViewById(R.id.imageView1);
         originPrice2=(TextView)findViewById(R.id.originText2);
         currentPrice2=(TextView)findViewById(R.id.currentPrice2);

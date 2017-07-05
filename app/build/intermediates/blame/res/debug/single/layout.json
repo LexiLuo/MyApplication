@@ -16,6 +16,10 @@
         "source": "/Users/luoxuechun/Documents/SmartHotelApp/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.1/res/layout/abc_list_menu_item_icon.xml"
     },
     {
+        "merged": "/Users/luoxuechun/Documents/SmartHotelApp/app/build/intermediates/res/merged/debug/layout/activity_user_profile.xml",
+        "source": "/Users/luoxuechun/Documents/SmartHotelApp/app/src/main/res/layout/activity_user_profile.xml"
+    },
+    {
         "merged": "/Users/luoxuechun/Documents/SmartHotelApp/app/build/intermediates/res/merged/debug/layout/notification_template_big_media.xml",
         "source": "/Users/luoxuechun/Documents/SmartHotelApp/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.1/res/layout/notification_template_big_media.xml"
     },
@@ -34,6 +38,10 @@
     {
         "merged": "/Users/luoxuechun/Documents/SmartHotelApp/app/build/intermediates/res/merged/debug/layout/abc_activity_chooser_view_list_item.xml",
         "source": "/Users/luoxuechun/Documents/SmartHotelApp/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.1/res/layout/abc_activity_chooser_view_list_item.xml"
+    },
+    {
+        "merged": "/Users/luoxuechun/Documents/SmartHotelApp/app/build/intermediates/res/merged/debug/layout/activity_room_info.xml",
+        "source": "/Users/luoxuechun/Documents/SmartHotelApp/app/src/main/res/layout/activity_room_info.xml"
     },
     {
         "merged": "/Users/luoxuechun/Documents/SmartHotelApp/app/build/intermediates/res/merged/debug/layout/abc_action_bar_view_list_nav_layout.xml",
@@ -124,6 +132,14 @@
         "source": "/Users/luoxuechun/Documents/SmartHotelApp/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.1/res/layout/abc_action_mode_close_item_material.xml"
     },
     {
+        "merged": "/Users/luoxuechun/Documents/SmartHotelApp/app/build/intermediates/res/merged/debug/layout/activity_register_room.xml",
+        "source": "/Users/luoxuechun/Documents/SmartHotelApp/app/src/main/res/layout/activity_register_room.xml"
+    },
+    {
+        "merged": "/Users/luoxuechun/Documents/SmartHotelApp/app/build/intermediates/res/merged/debug/layout/activity_register.xml",
+        "source": "/Users/luoxuechun/Documents/SmartHotelApp/app/src/main/res/layout/activity_register.xml"
+    },
+    {
         "merged": "/Users/luoxuechun/Documents/SmartHotelApp/app/build/intermediates/res/merged/debug/layout/abc_list_menu_item_checkbox.xml",
         "source": "/Users/luoxuechun/Documents/SmartHotelApp/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.1/res/layout/abc_list_menu_item_checkbox.xml"
     },
@@ -154,6 +170,10 @@
     {
         "merged": "/Users/luoxuechun/Documents/SmartHotelApp/app/build/intermediates/res/merged/debug/layout/design_navigation_item_separator.xml",
         "source": "/Users/luoxuechun/Documents/SmartHotelApp/app/build/intermediates/exploded-aar/com.android.support/design/24.2.1/res/layout/design_navigation_item_separator.xml"
+    },
+    {
+        "merged": "/Users/luoxuechun/Documents/SmartHotelApp/app/build/intermediates/res/merged/debug/layout/drawer_list_item.xml",
+        "source": "/Users/luoxuechun/Documents/SmartHotelApp/app/src/main/res/layout/drawer_list_item.xml"
     },
     {
         "merged": "/Users/luoxuechun/Documents/SmartHotelApp/app/build/intermediates/res/merged/debug/layout/notification_template_part_chronometer.xml",
