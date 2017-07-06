@@ -178,7 +178,7 @@ public class RegisterActivity extends BaseAppCompatActivity{
                         .setMessage(result)
                         .setPositiveButton("Ok", null)
                         .show();
-                //TODO 自动跳转到登录界面
+                //自动跳转到登录界面
                 Thread thread = new Thread(new returnToLogin());
                 thread.start();
             }
@@ -234,7 +234,7 @@ public class RegisterActivity extends BaseAppCompatActivity{
                         .setMessage(result)
                         .setPositiveButton("Ok", null)
                         .show();
-                //TODO 自动跳转到登录界面
+                //自动跳转到登录界面
                 Thread thread = new Thread(new returnToLogin());
                 thread.start();
             }

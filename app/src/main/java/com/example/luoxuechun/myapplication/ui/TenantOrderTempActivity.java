@@ -21,6 +21,9 @@ import android.widget.SeekBar;
 import android.widget.Spinner;
 
 import com.example.luoxuechun.myapplication.R;
+import com.example.luoxuechun.myapplication.entity.OrderEntity;
+import com.example.luoxuechun.myapplication.utils.LinkToServer;
+import com.google.gson.Gson;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -38,11 +41,12 @@ public class TenantOrderTempActivity extends BaseAppCompatActivity{
     private String[] mItemTitles;
     private EditText checkinTime, checkoutTime;
     private SeekBar price;
-    private Spinner roomType,city,district;
+    private Spinner roomNum,roomType,city,district;
     private CheckBox choose1,choose2,choose3,choose4;
     private List<CheckBox> extra;
     private Button confirm;
     private ArrayAdapter<String> adapter;
+    private final static String url = "/tenant";
 
 
     public void onCreate(Bundle savedInstanceState){
@@ -57,6 +61,7 @@ public class TenantOrderTempActivity extends BaseAppCompatActivity{
         city = (Spinner)findViewById(R.id.cityValue);
         district = (Spinner)findViewById(R.id.districtValue);
         price = (SeekBar)findViewById(R.id.price_seekBar);
+        roomNum = (Spinner)findViewById(R.id.number_of_room);
         roomType = (Spinner)findViewById(R.id.type_of_room);
         choose1 = (CheckBox)findViewById(R.id.checkBox);
         choose2 = (CheckBox)findViewById(R.id.checkBox2);
@@ -173,7 +178,15 @@ public class TenantOrderTempActivity extends BaseAppCompatActivity{
                         extra_requirements.append(cb.getText().toString()+" ");
                     }
                 }
-
+                OrderEntity orderEntity = new OrderEntity();
+                orderEntity.setRoomNum((roomNum.getSelectedItemId()+1)+"");
+                orderEntity.setRoomType((String)roomType.getSelectedItem());
+                orderEntity.setStartTime(inTime);
+                orderEntity.setEndTime(outTime);
+                orderEntity.setAddress((String)city.getSelectedItem()+(String)district.getSelectedItem());
+                Gson gson = new Gson();
+                String param = gson.toJson(orderEntity);
+                LinkToServer.sendPost(url,param);
                 Bundle data = new Bundle();
                 data.putString("checkinTime",inTime);
                 data.putString("checkoutTime",outTime);
@@ -185,7 +198,7 @@ public class TenantOrderTempActivity extends BaseAppCompatActivity{
                 Intent it = new Intent();
                 it.putExtras(data);
 
-               it.setClass(TenantOrderTempActivity.this,OrderResultsActivity.class);
+                it.setClass(TenantOrderTempActivity.this,OrderResultsActivity.class);
                 startActivity(it);
             }
         });

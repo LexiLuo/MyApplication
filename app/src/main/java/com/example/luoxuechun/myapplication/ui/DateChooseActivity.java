@@ -27,7 +27,7 @@ public class DateChooseActivity extends BaseAppCompatActivity{
         mDatePicker = (DatePicker) findViewById(R.id.datePicker);
         Calendar c = Calendar.getInstance();
         year = c.get(Calendar.YEAR);
-        month = c.get(Calendar.MONTH)+1;
+        month = c.get(Calendar.MONTH);
         day = c.get(Calendar.DAY_OF_MONTH);
 
         //初始化DatePicker组件，初始化时指定监听器
@@ -40,7 +40,7 @@ public class DateChooseActivity extends BaseAppCompatActivity{
                 Intent intent = new Intent();
                 Bundle bundle = new Bundle();
                 bundle.putString("year",year+"");
-                bundle.putString("month",month+"");
+                bundle.putString("month",(month+1)+"");
                 bundle.putString("day",day+"");
                 intent.putExtras(bundle);
                 setResult(RESULT_OK,intent);

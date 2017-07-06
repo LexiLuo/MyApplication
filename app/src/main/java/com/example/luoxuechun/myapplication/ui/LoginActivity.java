@@ -12,7 +12,12 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 import com.example.luoxuechun.myapplication.R;
+import com.example.luoxuechun.myapplication.entity.TenantEntity;
 import com.example.luoxuechun.myapplication.utils.LinkToServer;
+import com.google.gson.Gson;
+
+import org.json.JSONException;
+import org.json.JSONObject;
 
 
 public class LoginActivity extends BaseAppCompatActivity {
@@ -78,23 +83,23 @@ public class LoginActivity extends BaseAppCompatActivity {
 
                 //check the right of user
                 String param = "{\"name\":"+"\""+nameValue+"\""+",\"password\":"+"\""+passValue+"\""+",\"type\":"+"\""+type+"\"}";
-//                String result = LinkToServer.sendPost(url,param);
-//                Log.d("loginact",result);
-//                if(result!=null && result.length()!=0)
-                if(nameValue.equals("hqq")&&passValue.equals("123")){
+                String result = LinkToServer.sendPost(url,param);
+                Gson gson = new Gson();
+                TenantEntity tenantEntity = gson.fromJson(result,TenantEntity.class);
+                if(result!=null && result.length()!=0) {
                     //登录成功,获得该用户相关数据
-//                    JSONObject json = null;
-//                    String economic = null;
-//                    String education = null;
-//                    String gender = null;
-//                    int id = 0;
-//                    String name = null;
-//                    String password = null;
-//                    String phonenum = null;
-//                    String preference = null;
-//                    String vocation = null;
-//                    try {
-//                        json = new JSONObject(result);
+                    JSONObject json = null;
+                    String economic = null;
+                    String education = null;
+                    String gender = null;
+                    int id = 0;
+                    String name = null;
+                    String password = null;
+                    String phonenum = null;
+                    String preference = null;
+                    String vocation = null;
+                    try {
+                        json = new JSONObject(result);
 //                        economic = json.getString("economic");
 //                        education = json.getString("education");
 //                        gender = json.getString("gender");
@@ -104,25 +109,36 @@ public class LoginActivity extends BaseAppCompatActivity {
 //                        phonenum = json.getString("phonenum");
 //                        preference = json.getString("preference");
 //                        vocation = json.getString("vocation");
-//                    } catch (JSONException e) {
-//                        e.printStackTrace();
-//                    }
+                        economic = tenantEntity.getEconomic();
+                        education = tenantEntity.getEducation();
+                        gender = tenantEntity.getGender();
+                        id = tenantEntity.getId();
+                        name = tenantEntity.getName();
+                        password = tenantEntity.getPassword();
+                        phonenum = tenantEntity.getPhonenum();
+                        preference = tenantEntity.getPreference();
+                        vocation = tenantEntity.getVocation();
+                    } catch (JSONException e) {
+                        e.printStackTrace();
+                    }
                     Bundle data = new Bundle();
-//                    data.putString("economic",economic);
-//                    data.putString("education",education);
-//                    data.putString("gender",gender);
-//                    data.putInt("id",id);
-//                    data.putString("name",name);
-//                    data.putString("password",password);
-//                    data.putString("phonenum",phonenum);
-//                    data.putString("preference",preference);
-//                    data.putString("vocation",vocation);
-                    data.putString("name",nameValue);
-                    data.putString("gender","Male");
-                    data.putString("type",type);
-                    data.putString("phone","18972367843");
-                    data.putString("vocation","professor");
-                    data.putString("education","bachelor");
+                    data.putString("economic",economic);
+                    data.putString("education",education);
+                    data.putString("gender",gender);
+                    data.putInt("id",id);
+                    data.putString("name",name);
+                    data.putString("password",password);
+                    data.putString("phonenum",phonenum);
+                    data.putString("preference",preference);
+                    data.putString("vocation",vocation);
+
+//                    data.putString("name",nameValue);
+//                    data.putString("gender","Male");
+//                    data.putString("type",type);
+//                    data.putString("phone","18972367843");
+//                    data.putString("vocation","professor");
+//                    data.putString("education","bachelor");
+
                     Intent intent=new Intent();
                     intent.putExtras(data);
                     intent.setClass(LoginActivity.this,UserProfileActivity.class);
@@ -144,8 +160,8 @@ public class LoginActivity extends BaseAppCompatActivity {
                 //check the right of user
 
                 String param = "{\"name\":"+"\""+nameValue+"\""+",\"password\":"+"\""+passValue+"\""+",\"type\":"+"\""+type+"\"}";
-//                String result = LinkToServer.sendPost(url,param);
-                if(nameValue.equals("Jackson")&&passValue.equals("123456")){
+                String result = LinkToServer.sendPost(url,param);
+                if(result!=null && result.length()!=0){
                     Bundle data = new Bundle();
                     data.putString("name",nameValue);
                     data.putString("type",type);

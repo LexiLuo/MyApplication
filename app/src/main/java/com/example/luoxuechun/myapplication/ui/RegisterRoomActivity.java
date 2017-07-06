@@ -20,6 +20,7 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 import com.example.luoxuechun.myapplication.R;
+import com.example.luoxuechun.myapplication.utils.LinkToServer;
 
 /**
  * Created by zcy on 2017/6/30.
@@ -34,6 +35,7 @@ public class RegisterRoomActivity extends BaseAppCompatActivity{
     private Button register;
     private EditText name,city,area;
     String type;
+    private final static String url = "/landlord/register";
     @Override
     protected void onCreate(Bundle savedInstanceState){
         //为了在主线程中访问网络，所以加了这两行
@@ -61,6 +63,8 @@ public class RegisterRoomActivity extends BaseAppCompatActivity{
                                 .setPositiveButton("Ok", null)
                                 .show();
                     }else{
+                        String param = "{\"name\":"+"\""+name+"\""+",\"city\":"+"\""+city+"\""+",\"area\":"+"\""+area+"\"}";
+                        LinkToServer.sendPost(url,param);
                         new AlertDialog.Builder(RegisterRoomActivity.this).setTitle("Register Success")
                                 .setMessage("Your registration request has been submitted！")
                                 .setPositiveButton("Ok", null)
