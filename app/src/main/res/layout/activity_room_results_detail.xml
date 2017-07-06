@@ -30,14 +30,15 @@
                android:layout_height="wrap_content"
                android:text="5.0"
                android:textStyle="bold"
-               android:textSize="22sp"
-               android:padding="10dp"
+               android:textSize="22dp"
+               android:paddingTop="10dp"
                android:textColor="@color/colorAccent"
-               android:layout_gravity="center"/>
+               android:layout_gravity="center"
+               android:id="@+id/score" />
            <ImageView
-               android:layout_width="30dp"
-               android:layout_height="30dp"
-               android:src="@mipmap/like"
+               android:layout_width="35dp"
+               android:layout_height="35dp"
+               android:src="@mipmap/like2"
                android:layout_gravity="center"/>
        </LinearLayout>
 
@@ -63,11 +64,12 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="2"
                     android:text="The location is "
-                    android:textColor="@color/C6"
+                    android:textColor="#87c38f"
                     android:layout_marginTop="10dp"
                     android:layout_marginLeft="4dp"
                     android:textSize="16sp"
-                    android:id="@+id/locationText1" />
+                    android:id="@+id/locationText1"
+                    />
             </LinearLayout>
 
             <HorizontalScrollView
@@ -92,7 +94,8 @@
                      android:layout_width="wrap_content"
                      android:layout_height="wrap_content"
                      android:text="2.5 m"
-                     android:layout_gravity="center" />
+                     android:layout_gravity="center"
+                     android:textColor="@color/C5"/>
              </LinearLayout>
 
          <LinearLayout
@@ -109,7 +112,8 @@
                  android:layout_width="wrap_content"
                  android:layout_height="wrap_content"
                  android:text="wifi"
-                 android:layout_gravity="center"/>
+                 android:layout_gravity="center"
+                 android:textColor="@color/C5"/>
          </LinearLayout>
 
              <LinearLayout
@@ -128,7 +132,8 @@
                      android:layout_height="wrap_content"
                      android:text="park"
                      android:layout_gravity="center"
-                     android:layout_marginTop="1dp"/>
+                     android:layout_marginTop="1dp"
+                     android:textColor="@color/C5"/>
              </LinearLayout>
              <LinearLayout
                  android:layout_width="wrap_content"
@@ -146,7 +151,8 @@
                      android:layout_height="wrap_content"
                      android:text="AC"
                      android:layout_gravity="center"
-                     android:layout_marginTop="1dp"/>
+                     android:layout_marginTop="1dp"
+                     android:textColor="@color/C5"/>
              </LinearLayout>
 
              <LinearLayout
@@ -172,7 +178,8 @@
                  android:layout_gravity="center"
                  android:textSize="20sp"
                  android:textStyle="bold"
-                 android:layout_marginLeft="20dp" />
+                 android:layout_marginLeft="20dp"
+                 android:textColor="@color/C5"/>
          </LinearLayout>
 
             </HorizontalScrollView>
@@ -187,14 +194,52 @@
         android:orientation="vertical"
         android:layout_marginTop="7dp"
         android:background="@color/bgcolor">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:background="@color/white"
+            android:padding="5dp"
+            android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Living Notes"
+            android:textStyle="bold"
+            android:textColor="@color/C6"
+            android:textSize="15dp"/>
+            <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="check in after 2 am and check out before 12 pm"
+            android:gravity="center"
+                android:padding="2dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="fare is offered after check out both paper and electrical"
+                android:gravity="center"
+                android:padding="2dp"/>
+        </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/white">
+            android:background="@color/white"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Negotiation process"
+                android:textStyle="bold"
+                android:textColor="@color/C6"
+                android:textSize="15dp"
+                android:padding="2dp"/>
             <android.support.v7.widget.RecyclerView
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:layout_height="110dp"
                 android:id="@+id/recycleView"
                 android:orientation="horizontal"
                 android:scrollIndicators="right">
@@ -216,7 +261,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
                 android:text="Total Price: "
-                android:textSize="19sp"
+                android:textSize="18sp"
                 android:textColor="@color/design_textinput_error_color_dark"
                 android:textStyle="bold" />
             <TextView
@@ -225,7 +270,7 @@
                 android:layout_weight="0.07"
                 android:layout_marginLeft="3dp"
                 android:text="280$"
-                android:textSize="18dp"
+                android:textSize="16dp"
                 android:textColor="@color/button_material_dark"
                 android:id="@+id/originText2" />
             <TextView
@@ -234,7 +279,7 @@
                 android:layout_weight="0.18"
                 android:layout_marginLeft="1dp"
                 android:text="260$ "
-                android:textSize="19dp"
+                android:textSize="18dp"
                 android:textColor="@color/design_textinput_error_color_dark"
                 android:textStyle="bold"
                 android:id="@+id/currentPrice2"

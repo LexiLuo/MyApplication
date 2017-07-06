@@ -35,7 +35,7 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_marginRight="10dp"
-                android:layout_weight="1.5"
+                android:layout_weight="2.2"
                 android:ems="10"
                 android:inputType="date"
                 android:hint="2017/07/06"/>
@@ -64,7 +64,7 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_marginRight="10dp"
-                android:layout_weight="2"
+                android:layout_weight="2.9"
                 android:ems="10"
                 android:inputType="date"
                 android:hint="2017/07/07"/>
@@ -90,7 +90,7 @@
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="2"
+                android:layout_weight="2.9"
                 android:orientation="vertical">
 
                 <LinearLayout
@@ -170,8 +170,8 @@
                 android:id="@+id/price_seekBar"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="2.3"
-                android:max="500"
+                android:layout_weight="2.9"
+                android:max="900"
                 android:progress="300" />
         </LinearLayout>
 
@@ -192,17 +192,30 @@
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="3"
+                android:layout_weight="4.8"
                 android:orientation="horizontal">
 
                 <TextView
-                    android:layout_marginLeft="45dp"
-                    android:id="@+id/bar_min_value"
+                android:layout_marginLeft="45dp"
+                android:id="@+id/bar_min_value"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="0" />
+                <TextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                    android:paddingRight="5dp"
                     android:layout_weight="1"
-                    android:text="0" />
-
+                    android:textAlignment="center"
+                    android:text="200" />
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="5dp"
+                    android:layout_weight="1"
+                    android:textAlignment="center"
+                    android:text="400" />
                 <TextView
                     android:id="@+id/bar_avg_value"
                     android:layout_width="0dp"
@@ -210,7 +223,7 @@
                     android:paddingRight="5dp"
                     android:layout_weight="1"
                     android:textAlignment="center"
-                    android:text="250" />
+                    android:text="600" />
                 <TextView
                     android:id="@+id/bar_max_value"
                     android:layout_width="0dp"
@@ -218,7 +231,7 @@
                     android:paddingRight="5dp"
                     android:layout_weight="1"
                     android:textAlignment="textEnd"
-                    android:text="500" />
+                    android:text="800" />
 
             </LinearLayout>
 
@@ -245,7 +258,7 @@
                 android:id="@+id/type_of_room"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
+                android:layout_weight="1.6"
                 android:entries="@array/room_types" />
         </LinearLayout>
 
@@ -296,6 +309,13 @@
                     android:layout_weight="4"
                     android:text="Airconditionor" />
 
+                <CheckBox
+                    android:id="@+id/checkBox5"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="4"
+                    android:text="Park" />
+
                 <TextView
                     android:id="@+id/useless2"
                     android:layout_width="0dp"
@@ -325,6 +345,13 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="4"
                     android:text="Hot Water" />
+
+                <CheckBox
+                    android:id="@+id/checkBox6"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="4"
+                    android:text="Wake Up" />
 
 
                 <CheckBox

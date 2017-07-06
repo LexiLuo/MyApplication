@@ -3,7 +3,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/toolbar"
     android:layout_width="match_parent"
-    android:layout_height="50dp"
+    android:layout_height="40dp"
     android:minHeight="?attr/actionBarSize"
     android:background="@color/colorDivider">
     <!--自定义toolbar的title 和subtitle -->
@@ -14,7 +14,7 @@
         android:layout_height="wrap_content"
         android:singleLine="true"
         android:textColor="@color/white"
-        android:text="subtitle"
+        android:text=""
         android:paddingRight="10dp"
         android:layout_gravity="right"
         android:textAlignment="center" />
@@ -30,7 +30,7 @@
         android:scrollHorizontally="true"
         android:textColor="@color/white"
         android:layout_gravity="center"
-        android:textSize="20sp"
+        android:textSize="20dp"
         android:textIsSelectable="true"
         android:textAlignment="center" />
 

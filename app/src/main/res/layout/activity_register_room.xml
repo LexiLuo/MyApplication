@@ -28,7 +28,7 @@
                 android:layout_weight="1"
                 android:gravity="right|center"
                 android:text="name"
-                android:textSize="20dp" />
+                android:textSize="20sp" />
 
             <EditText
                 android:id="@+id/hotelNameValue"
@@ -52,7 +52,7 @@
                 android:layout_weight="1"
                 android:gravity="right|center"
                 android:text="city"
-                android:textSize="20dp" />
+                android:textSize="20sp" />
 
             <EditText
                 android:id="@+id/hotelCityValue"
@@ -75,7 +75,7 @@
                 android:layout_weight="1"
                 android:gravity="right|center"
                 android:text="area"
-                android:textSize="20dp" />
+                android:textSize="20sp" />
 
             <EditText
                 android:id="@+id/hotelAreaValue"
@@ -100,7 +100,7 @@
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="type"
-                android:textSize="20dp" />
+                android:textSize="20sp" />
 
             <Spinner
                 android:id="@+id/type_of_room"
