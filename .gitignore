@@ -1,5 +1,3 @@
-
-
 *.iml
 .gradle
 /local.properties
@@ -36,12 +34,7 @@ build.gradle
 
 *.json
 
-.idea/misc.xml
-
 .idea/vcs.xml
-
-app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_7/classes.dex
 
 *.dex
 
-*.class
