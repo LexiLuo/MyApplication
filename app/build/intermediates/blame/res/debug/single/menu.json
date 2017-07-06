@@ -6,5 +6,9 @@
     {
         "merged": "/Users/luoxuechun/Documents/SmartHotelApp/app/build/intermediates/res/merged/debug/menu/activity_left_slip_drawer.xml",
         "source": "/Users/luoxuechun/Documents/SmartHotelApp/app/src/main/res/menu/activity_left_slip_drawer.xml"
+    },
+    {
+        "merged": "/Users/luoxuechun/Documents/SmartHotelApp/app/build/intermediates/res/merged/debug/menu/main.xml",
+        "source": "/Users/luoxuechun/Documents/SmartHotelApp/app/src/main/res/menu/main.xml"
     }
 ]

@@ -1,11 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#3F51B5</color>
-    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorPrimary">#9bda68</color>
+    <color name="colorPrimary2">#3F51B5</color>
+    <color name="colorPrimaryDark">#9bda68</color>
+    <color name="colorPrimaryDark2">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
     <color name="colorDivider">#9bda68</color>
     <color name="white">#fefffc</color>
     <color name="grey">#e1e1df</color>
     <color name="toolBarColor">#313f48</color>
     <color name="baseButtonColor">#6aa632</color>
+    <color name="bgcolor">#f2f2f2</color>
+    <color name="divider2">#eeeeee</color>
+    <color name="divider">#dddddd</color>
+    <color name="C5">#999999</color>
+    <color name="C6">#666666</color>
+    <color name="C11">#5ed125</color>
+    <color name="C9">#ffab19</color>
+    <color name="C10">#fb7e00</color>
+    <color name="C8">#00aaff</color>
+    
 </resources>

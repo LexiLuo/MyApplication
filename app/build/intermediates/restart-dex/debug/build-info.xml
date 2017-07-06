@@ -4,27 +4,27 @@
     api-level="25"
     density="420dpi"
     format="7"
-    timestamp="7790079622969"
+    timestamp="627924864665"
     token="4175518148819156760" >
 
     <task
         name="javac"
-        duration="2231" />
+        duration="1413" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="568" />
+        duration="509" />
     <task
         name="verifier"
-        duration="108" />
+        duration="115" />
 
     <artifact
         location="/Users/luoxuechun/Documents/SmartHotelApp/app/build/outputs/apk/app-debug.apk"
         type="MAIN" />
 
-    <build timestamp="7790079622969" >
+    <build timestamp="627924864665" >
         <artifact
             location="/Users/luoxuechun/Documents/SmartHotelApp/app/build/outputs/apk/app-debug.apk"
             type="MAIN" />

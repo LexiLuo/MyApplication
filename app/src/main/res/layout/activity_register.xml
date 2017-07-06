@@ -222,7 +222,7 @@
             android:layout_height="0dp"
             android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="30dp"
             android:layout_weight="0.4"
             android:orientation="horizontal">
 
@@ -233,7 +233,7 @@
                 android:layout_margin="10dp"
                 android:layout_weight="1"
                 android:background="@color/highlighted_text_material_dark"
-                android:text="Register  As  Tenant"
+                android:text="Tenant Register"
                 android:textSize="15dp" />
 
             <Button
@@ -243,7 +243,7 @@
                 android:layout_margin="10dp"
                 android:layout_weight="1"
                 android:background="@color/material_deep_teal_200"
-                android:text="Register  As  Landlord"
+                android:text="Landlord Register"
                 android:textSize="15dp" />
 
         </LinearLayout>

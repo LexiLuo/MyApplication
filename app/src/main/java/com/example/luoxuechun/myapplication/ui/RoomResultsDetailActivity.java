@@ -30,7 +30,7 @@ public class RoomResultsDetailActivity extends  BaseAppCompatActivity {
     private TextView location;
     private TextView currentPrice2;
     private ImageView imageView1;
-
+   private TextView scoreText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState){
@@ -41,6 +41,7 @@ public class RoomResultsDetailActivity extends  BaseAppCompatActivity {
         initData();
         Intent intent=getIntent();
         setToolBarTitle(intent.getStringExtra("hotelName"));
+        getSubTitle().setText("");
         imageView1=(ImageView)findViewById(R.id.imageView1);
         originPrice2=(TextView)findViewById(R.id.originText2);
         currentPrice2=(TextView)findViewById(R.id.currentPrice2);
@@ -55,7 +56,7 @@ public class RoomResultsDetailActivity extends  BaseAppCompatActivity {
         mRecyclerView.setAdapter(mAdapter= new HomeAdapter());
 
         originPrice2.getPaint().setFlags(Paint.STRIKE_THRU_TEXT_FLAG);
-
+         scoreText=(TextView)findViewById(R.id.score);
         location=(TextView)findViewById(R.id.locationText1);
 //        hotelName=(TextView)findViewById(R.id);
         location.setText(intent.getStringExtra("hotelLocation"));
@@ -63,12 +64,16 @@ public class RoomResultsDetailActivity extends  BaseAppCompatActivity {
 
         if(intent.getStringExtra("hotelName").toString().equals("Jiaxin Hotel")){
             imageView1.setImageResource(R.mipmap.timg1);
+            scoreText.setText("4.8");
         }else if(intent.getStringExtra("hotelName").toString().equals("Jiayu Hotel")){
             imageView1.setImageResource(R.mipmap.timg2);
+            scoreText.setText("4.7");
         }else if(intent.getStringExtra("hotelName").toString().equals("Inn De Hotel")){
             imageView1.setImageResource(R.mipmap.timg3);
+            scoreText.setText("4.6");
         }else if(intent.getStringExtra("hotelName").toString().equals("Wong Kim Dinh Hotel")){
             imageView1.setImageResource(R.mipmap.timg4);
+            scoreText.setText("4.4");
         }
     }
 
